@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 468755052}
   - component: {fileID: 468755051}
   - component: {fileID: 468755050}
+  - component: {fileID: 468755054}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -436,6 +437,21 @@ Transform:
   m_Father: {fileID: 1423157752}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &468755054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468755049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b7c56224e9e464a99c8b7680cf1574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet_Prefab: {fileID: 4763991620475279944, guid: afdb15dc4937b0d44ab293932770aab2,
+    type: 3}
+  fire_Pos: {fileID: 877755883}
 --- !u!1 &469111784
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +639,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf2b6c60c7efa4495a3151e2d71e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &877755883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877755884}
+  m_Layer: 0
+  m_Name: FirePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &877755884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877755883}
+  m_LocalRotation: {x: 0.9996444, y: -0.0038759676, z: -0.008681503, w: 0.024916394}
+  m_LocalPosition: {x: 0.00002, y: -0.00034, z: -0.00618}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 155388623}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -182.852, y: 1.0069885, z: 0.46899414}
 --- !u!1 &1150601282
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +983,10 @@ PrefabInstance:
     - target: {fileID: 400010, guid: 4536ec9fadcf502489e6ab4ee70a62e4, type: 3}
       propertyPath: m_LocalScale.z
       value: 5.8443
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 4536ec9fadcf502489e6ab4ee70a62e4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4536ec9fadcf502489e6ab4ee70a62e4, type: 3}
