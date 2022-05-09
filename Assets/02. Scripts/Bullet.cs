@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bullet_Speed = 100f;
+        bullet_Speed = 200f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * bullet_Speed * Time.deltaTime);
+        transform.position += transform.forward * bullet_Speed * Time.deltaTime ;
     }
 
     private void OnCollisionEnter(Collision collision)
