@@ -451,6 +451,8 @@ MonoBehaviour:
   bullet_Prefab: {fileID: 4763991620475279944, guid: afdb15dc4937b0d44ab293932770aab2,
     type: 3}
   fire_Pos: {fileID: 877755883}
+  fireRate: 0
+  ammo: 0
 --- !u!1 &469111784
 GameObject:
   m_ObjectHideFlags: 0

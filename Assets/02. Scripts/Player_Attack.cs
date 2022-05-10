@@ -7,30 +7,57 @@ public class Player_Attack : MonoBehaviour
     public GameObject bullet_Prefab;
     public GameObject fire_Pos;
 
-    float reloadRate;
-    Transform firepos;  
+    public float fireRate; // 발사 속도, 발사와 발사 사이 간격
+    public int ammo; // 탄창 수
+    Transform firepos;
+
+    bool isAmmoEmpty = false;
+    bool isReloading = false;
     
     void Start()
     {
+        ammo = 50;
         firepos = fire_Pos.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        reloadRate -= Time.deltaTime;
-        if (Input.GetMouseButton(0) && reloadRate < 0)
+        fireRate -= Time.deltaTime;
+        Debug.Log("Ammo : " + ammo);
+        Debug.Log("isAmmoEmpty : " + isAmmoEmpty);
+        Debug.Log("isReloading : " + isReloading);
+        if(ammo < 0 && !isReloading)
         {
-            Fire();
+            isAmmoEmpty = true;
+        }
+
+        if (!isAmmoEmpty)
+        {
+            if (Input.GetMouseButton(0) && fireRate < 0)
+            {
+                Fire();
+            }
+        }
+        else if (isAmmoEmpty)
+        {
+                StartCoroutine(Reload());
         }
 
     }
-
-
     void Fire()
     {
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
-        reloadRate = 0.07f;
+        ammo--;
+        fireRate = 0.08f;
     }
 
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        yield return new WaitForSeconds(1.0f);
+        ammo = 50;
+        isAmmoEmpty = false;
+        isReloading = false;
+    }
 }
