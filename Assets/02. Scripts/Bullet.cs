@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bullet_Speed = 500f;
+        bullet_Speed = 2500f;
         Destroy(gameObject, 5.0f);
     }
 

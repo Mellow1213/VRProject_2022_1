@@ -24,9 +24,6 @@ public class Player_Attack : MonoBehaviour
     void Update()
     {
         fireRate -= Time.deltaTime;
-        Debug.Log("Ammo : " + ammo);
-        Debug.Log("isAmmoEmpty : " + isAmmoEmpty);
-        Debug.Log("isReloading : " + isReloading);
         if(ammo < 0 && !isReloading)
         {
             isAmmoEmpty = true;
