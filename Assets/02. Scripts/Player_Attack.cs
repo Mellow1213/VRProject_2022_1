@@ -47,6 +47,8 @@ public class Player_Attack : MonoBehaviour
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
         ammo--;
         fireRate = 0.08f;
+
+        
     }
 
     IEnumerator Reload()
