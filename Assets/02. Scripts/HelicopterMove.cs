@@ -22,7 +22,7 @@ public class HelicopterMove : MonoBehaviour
     void Update()
     {
         Debug.Log("nextIndex = " + nextIndex);
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A)) // 테스트용 -  헬리콥터 이동 정지 토글 버튼
             go = !go;
 
         if(go)
