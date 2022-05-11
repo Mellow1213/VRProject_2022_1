@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class ShowGizmo : MonoBehaviour
 {
-    Color pointColor = Color.green;
-    float radius = 1.5f;
-
-
-
+    public Color pointColor = Color.green;
+    public float radius = 1.5f;
 
     private void OnDrawGizmos()
     {

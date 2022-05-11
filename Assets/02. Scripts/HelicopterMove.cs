@@ -40,6 +40,9 @@ public class HelicopterMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Finalpoint"))
+            go = false;
+
         if (other.CompareTag("Waypoint"))
             nextIndex = (++nextIndex >= waypoints.Length) ? 1 : nextIndex;
     }

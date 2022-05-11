@@ -17,10 +17,9 @@ public class WaypointTrack : MonoBehaviour
         Vector3 currentPosition = waypoints[nextIndex].position;
         Vector3 nextPosition;
 
-        for (int i = 0; i < waypoints.Length; i++)
+        for (int i = 1; i < waypoints.Length-1; i++)
         {
-            nextPosition = (++nextIndex >= waypoints.Length) ?
-                waypoints[1].position : waypoints[nextIndex].position;
+            nextPosition = waypoints[++nextIndex].position;
             Gizmos.DrawLine(currentPosition, nextPosition);
 
             currentPosition = nextPosition;

@@ -7,8 +7,7 @@ public class Status : MonoBehaviour
     [SerializeField] private int HP; // Inspector에서 수정 금지!!
 
     private void Start()
-    {
-        HP = 200;       
+    {   
     }
 
     public int getHP()
@@ -28,7 +27,6 @@ public class Status : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("HP : " + HP);
         if (HP < 0)
         {
             Destroy(gameObject);
