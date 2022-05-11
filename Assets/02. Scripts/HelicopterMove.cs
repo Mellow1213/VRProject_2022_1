@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HelicopterMove : MonoBehaviour
 {
+    public bool doLoop = false; // 계속 돌지 안돌지, 테스트용
     public float speed = 9.0f;
     public float damping = 3.0f;
     private Transform playerTransform;
@@ -41,9 +42,14 @@ public class HelicopterMove : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Finalpoint"))
-            go = false;
+        {
+            if (!doLoop)
+                go = false;
+            else
+                nextIndex = 1;
+        }
 
         if (other.CompareTag("Waypoint"))
-            nextIndex = (++nextIndex >= waypoints.Length) ? 1 : nextIndex;
+            nextIndex++;
     }
 }

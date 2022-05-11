@@ -6,9 +6,11 @@ public class Player_Attack : MonoBehaviour
 {
     public GameObject bullet_Prefab;
     public GameObject fire_Pos;
+    public AudioClip fireSound;
 
     public float fireRate; // 발사 속도, 발사와 발사 사이 간격
     public int ammo; // 탄창 수
+
     Transform firepos;
 
     bool isAmmoEmpty = false;
@@ -48,7 +50,6 @@ public class Player_Attack : MonoBehaviour
         ammo--;
         fireRate = 0.08f;
 
-        
     }
 
     IEnumerator Reload()
