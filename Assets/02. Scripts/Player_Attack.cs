@@ -8,6 +8,8 @@ public class Player_Attack : MonoBehaviour
     public GameObject fire_Pos;
     public AudioClip fireSound;
 
+    AudioSource audioSource;
+
     public float fireRate; // 발사 속도, 발사와 발사 사이 간격
     public int ammo; // 탄창 수
 
@@ -18,6 +20,7 @@ public class Player_Attack : MonoBehaviour
     
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         ammo = 50;
         firepos = fire_Pos.GetComponent<Transform>();
     }
@@ -49,7 +52,7 @@ public class Player_Attack : MonoBehaviour
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
         ammo--;
         fireRate = 0.08f;
-
+        audioSource.PlayOneShot(fireSound);
     }
 
     IEnumerator Reload()

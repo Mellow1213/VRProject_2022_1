@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         bulletDamage = 10;
-        bullet_Speed = 2500f;
+        bullet_Speed = 400f;
         Destroy(gameObject, 5.0f);
     }
 

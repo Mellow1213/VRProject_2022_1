@@ -28,7 +28,6 @@ public class EnemyMove : MonoBehaviour
             i = Random.Range(0, enemyPosition.Length);
             timeRate = 0;
         }
-        transform.position = Vector3.MoveTowards(transform.position, enemyPosition[i].transform.position, Time.deltaTime);
     }
 
     
