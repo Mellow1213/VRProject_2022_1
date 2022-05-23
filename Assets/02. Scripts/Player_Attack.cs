@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     public GameObject bullet_Prefab;
+    public GameObject bullet_Shell_Prefab;
+    public GameObject bullet_Shell_Pos;
     public GameObject fire_Pos;
     public GameObject minigun_head;
     public AudioClip fireSound;
@@ -54,6 +56,8 @@ public class Player_Attack : MonoBehaviour
     void Fire()
     {
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
+        GameObject temp = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
+        temp.transform.parent = this.transform;
         ammo--;
         fireRate = 0.08f;
         audioSource.PlayOneShot(fireSound);
@@ -61,14 +65,14 @@ public class Player_Attack : MonoBehaviour
 
     void GunRotate()
     {
-        minigun_head.transform.Rotate(Vector3.up * 50f);
+        minigun_head.transform.Rotate(Vector3.up * 25f);
     }
 
     IEnumerator Reload()
     {
         isReloading = true;
-        yield return new WaitForSeconds(1.0f);
         ammo = 50;
+        yield return new WaitForSeconds(1.0f);
         isAmmoEmpty = false;
         isReloading = false;
     }
