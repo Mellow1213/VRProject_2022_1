@@ -8,6 +8,7 @@ public class Player_Attack : MonoBehaviour
     public GameObject bullet_Shell_Prefab;
     public GameObject bullet_Shell_Pos;
     public GameObject fire_Pos;
+    public GameObject fire_Effect;
     public GameObject minigun_head;
     public AudioClip fireSound;
 
@@ -16,6 +17,8 @@ public class Player_Attack : MonoBehaviour
 
     public float fireRate; // 발사 속도, 발사와 발사 사이 간격
     public int ammo; // 탄창 수
+
+    GameObject tempObject;
 
     Transform firepos;
 
@@ -56,8 +59,11 @@ public class Player_Attack : MonoBehaviour
     void Fire()
     {
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
-        GameObject temp = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
-        temp.transform.parent = this.transform;
+        tempObject = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
+        tempObject.transform.parent = this.transform;
+        tempObject = Instantiate(fire_Effect, firepos.transform.position, firepos.transform.rotation);
+        tempObject.transform.parent = this.transform;
+
         ammo--;
         fireRate = 0.08f;
         audioSource.PlayOneShot(fireSound);

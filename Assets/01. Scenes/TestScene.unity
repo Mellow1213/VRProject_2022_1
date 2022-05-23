@@ -787,6 +787,7 @@ MonoBehaviour:
     type: 3}
   bullet_Shell_Pos: {fileID: 503542112}
   fire_Pos: {fileID: 877755883}
+  fire_Effect: {fileID: 100006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
   minigun_head: {fileID: 836450201}
   fireSound: {fileID: 8300000, guid: 1b145bcffd767854fb0c71c37678ebaa, type: 3}
   fireRate: 1
@@ -1434,6 +1435,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointColor: {r: 0, g: 1, b: 0, a: 1}
   radius: 0.5
+--- !u!1001 &1039347391
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4763991620475279944, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -384.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 552.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -73.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811585808343701837, guid: afdb15dc4937b0d44ab293932770aab2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: afdb15dc4937b0d44ab293932770aab2, type: 3}
 --- !u!1 &1140035624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1140035629
 MonoBehaviour:
@@ -1747,7 +1817,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1285263510
 GameObject:
@@ -1839,7 +1909,7 @@ Transform:
   m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1345094903
 GameObject:
@@ -2545,7 +2615,7 @@ Transform:
   - {fileID: 562497472}
   - {fileID: 258021681}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -160.68301, z: 0}
 --- !u!65 &2109057050
 BoxCollider:
@@ -2573,7 +2643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doLoop: 1
-  speed: 30
+  speed: 8
   damping: 1
 --- !u!54 &2109057052
 Rigidbody:
@@ -2726,7 +2796,7 @@ Transform:
   - {fileID: 841008275}
   - {fileID: 1146791286}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -47.162003, z: 0}
 --- !u!114 &2119866235
 MonoBehaviour:

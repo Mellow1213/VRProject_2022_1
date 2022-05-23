@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float bullet_Speed;
+    float bullet_Speed;
     public int bulletDamage;
     // Start is called before the first frame update
     void Start()
     {
         bulletDamage = 10;
-        bullet_Speed = 800f;
+        bullet_Speed = 1600f;
         Destroy(gameObject, 5.0f);
     }
 
