@@ -6,19 +6,20 @@ public class EnemyGunCtrl : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject bulletSpawn;
-
     private bool isFire;
 
     // Start is called before the first frame update
     void Start()
     {
         isFire = false;
+          
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (!isFire)
         {
             StartCoroutine(Fire());
