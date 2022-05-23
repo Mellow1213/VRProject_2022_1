@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyLook : MonoBehaviour
 {
-    public GameObject target;
+    private GameObject target;
 
     // Start is called before the first frame update
     void Start()
