@@ -6,7 +6,9 @@ public class Player_Attack : MonoBehaviour
 {
     public GameObject bullet_Prefab;
     public GameObject fire_Pos;
+    public GameObject minigun_head;
     public AudioClip fireSound;
+
 
     AudioSource audioSource;
 
@@ -34,9 +36,11 @@ public class Player_Attack : MonoBehaviour
             isAmmoEmpty = true;
         }
 
-        if (!isAmmoEmpty)
+        if (Input.GetMouseButton(0) && !isAmmoEmpty)
         {
-            if (Input.GetMouseButton(0) && fireRate < 0)
+            GunRotate();
+
+            if (fireRate < 0)
             {
                 Fire();
             }
@@ -53,6 +57,11 @@ public class Player_Attack : MonoBehaviour
         ammo--;
         fireRate = 0.08f;
         audioSource.PlayOneShot(fireSound);
+    }
+
+    void GunRotate()
+    {
+        minigun_head.transform.Rotate(Vector3.up * 50f);
     }
 
     IEnumerator Reload()
