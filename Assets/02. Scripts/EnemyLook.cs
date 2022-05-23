@@ -15,7 +15,6 @@ public class EnemyLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(target);
         transform.LookAt(target.transform);
     }
 }

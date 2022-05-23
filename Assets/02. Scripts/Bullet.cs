@@ -9,8 +9,8 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bulletDamage = 10;
-        bullet_Speed = 1600f;
+        bulletDamage = 5;
+        bullet_Speed = 800f;
         Destroy(gameObject, 5.0f);
     }
 
@@ -23,9 +23,11 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("맞은 개체 이름 : " + collision.gameObject.name);
-        Destroy(gameObject);
 
-        Status status = collision.gameObject.GetComponent<Status>();
-        status.Damaged(bulletDamage);
+        if(!(collision.gameObject.GetComponent<Status>() is null)){
+            Status status = collision.gameObject.GetComponent<Status>();
+            status.Damaged(bulletDamage);
+        }
+        Destroy(gameObject);
     }
 }

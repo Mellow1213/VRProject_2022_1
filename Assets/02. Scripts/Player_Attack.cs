@@ -5,10 +5,14 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     public GameObject bullet_Prefab;
+    public GameObject fire_Pos;
+
     public GameObject bullet_Shell_Prefab;
     public GameObject bullet_Shell_Pos;
-    public GameObject fire_Pos;
+
     public GameObject fire_Effect;
+    public GameObject muzzle_Pos;
+
     public GameObject minigun_head;
     public AudioClip fireSound;
 
@@ -61,7 +65,7 @@ public class Player_Attack : MonoBehaviour
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
         tempObject = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
         tempObject.transform.parent = this.transform;
-        tempObject = Instantiate(fire_Effect, firepos.transform.position, firepos.transform.rotation);
+        tempObject = Instantiate(fire_Effect, muzzle_Pos.transform.position, muzzle_Pos.transform.rotation);
         tempObject.transform.parent = this.transform;
 
         ammo--;
