@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class EnemyLook : MonoBehaviour
 {
-    public Transform target;
-    private Vector3 targetPosition;
+    public GameObject target;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = GameObject.Find("House Big");
     }
 
     // Update is called once per frame
     void Update()
     {
-        targetPosition = target.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(targetPosition);
-
-        transform.rotation = rotation;
+        Debug.Log(target);
+        transform.LookAt(target.transform);
     }
 }
