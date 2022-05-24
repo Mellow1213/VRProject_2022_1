@@ -14,7 +14,7 @@ public class HelicopterMove : MonoBehaviour
 
     int loopIndex;
 
-    bool loopSwitch = true;
+    bool loopEndSwitch = false;
     bool goSwitch = true;
 
     // Start is called before the first frame update
@@ -27,10 +27,10 @@ public class HelicopterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("loopSwitch (A) = " + loopSwitch);
-        Debug.Log("goSwitch (S) = " + goSwitch);
+        //Debug.Log("loopEndSwitch (A) = " + loopEndSwitch);
+        //Debug.Log("goSwitch (S) = " + goSwitch);
         if (Input.GetKeyDown(KeyCode.A)) // 디버그 - 루프 On/Off
-            loopSwitch = !loopSwitch;
+            loopEndSwitch = !loopEndSwitch;
         if (Input.GetKeyDown(KeyCode.S)) // 디버그 - 이동 On/Off
             goSwitch = !goSwitch;
 
@@ -58,7 +58,7 @@ public class HelicopterMove : MonoBehaviour
 
         if (other.CompareTag("LoopEndpoint"))
         {
-            if (loopSwitch)
+            if (loopEndSwitch)
                 nextIndex++;
             else
                 nextIndex = loopIndex;

@@ -14,7 +14,7 @@ public class a : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("FlyerSpawn (D)");
+        //Debug.Log("FlyerSpawn (D)");
         if (Input.GetKeyDown(KeyCode.D))
             Instantiate(flyerEnemy);
 
