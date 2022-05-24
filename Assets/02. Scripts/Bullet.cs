@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     float bullet_Speed;
     public int bulletDamage;
+    public GameObject fireEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Instantiate(fireEffect.gameObject, transform.position, transform.rotation);
         Debug.Log("맞은 개체 이름 : " + collision.gameObject.name);
 
         if(!(collision.gameObject.GetComponent<Status>() is null)){
