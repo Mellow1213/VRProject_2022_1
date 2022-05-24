@@ -22,6 +22,8 @@ public class Player_Attack : MonoBehaviour
     public float fireRate; // 발사 속도, 발사와 발사 사이 간격
     public int ammo; // 탄창 수
 
+    float gunRotateSpeed;
+
     GameObject tempObject;
 
     Transform firepos;
@@ -34,6 +36,7 @@ public class Player_Attack : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         ammo = 50;
         firepos = fire_Pos.GetComponent<Transform>();
+        gunRotateSpeed = 0;
     }
 
     // Update is called once per frame
@@ -45,11 +48,12 @@ public class Player_Attack : MonoBehaviour
             isAmmoEmpty = true;
         }
 
+        GunRotate();
+
         if (Input.GetMouseButton(0) && !isAmmoEmpty)
         {
-            GunRotate();
 
-            if (fireRate < 0)
+            if (fireRate < 0 && gunRotateSpeed >= 10f)
             {
                 Fire();
             }
@@ -75,7 +79,16 @@ public class Player_Attack : MonoBehaviour
 
     void GunRotate()
     {
-        minigun_head.transform.Rotate(Vector3.up * 25f);
+        Debug.Log("gunRotateSpeed : " + gunRotateSpeed);
+        if (Input.GetMouseButton(0) && gunRotateSpeed <= 15f && !isAmmoEmpty)
+            gunRotateSpeed += Time.deltaTime * 8;
+        else if (gunRotateSpeed >= 0)
+            gunRotateSpeed -= Time.deltaTime * 20;
+
+        if (gunRotateSpeed <= 0)
+            gunRotateSpeed = 0f;
+
+        minigun_head.transform.Rotate(Vector3.up * gunRotateSpeed);
     }
 
     IEnumerator Reload()
