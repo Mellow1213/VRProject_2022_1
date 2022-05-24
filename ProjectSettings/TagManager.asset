@@ -7,6 +7,9 @@ TagManager:
   - Waypoint
   - Finalpoint
   - Enemy
+  - FxTemporaire
+  - Looppoint
+  - LoopEndpoint
   layers:
   - Default
   - TransparentFX

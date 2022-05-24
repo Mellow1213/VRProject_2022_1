@@ -42,7 +42,8 @@ public class Player_Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fireRate -= Time.deltaTime;
+        if(fireRate >= -1f )
+            fireRate -= Time.deltaTime;
         if(ammo < 0 && !isReloading)
         {
             isAmmoEmpty = true;
@@ -79,7 +80,6 @@ public class Player_Attack : MonoBehaviour
 
     void GunRotate()
     {
-        Debug.Log("gunRotateSpeed : " + gunRotateSpeed);
         if (Input.GetMouseButton(0) && gunRotateSpeed <= 15f && !isAmmoEmpty)
             gunRotateSpeed += Time.deltaTime * 8;
         else if (gunRotateSpeed >= 0)

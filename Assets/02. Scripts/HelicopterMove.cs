@@ -11,8 +11,10 @@ public class HelicopterMove : MonoBehaviour
     private Transform[] waypoints;
     private int nextIndex = 1;
 
+    int loopIndex;
+
     bool go = true;
-        // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
         playerTransform = GetComponent<Transform>();
@@ -22,11 +24,12 @@ public class HelicopterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A)) // 테스트용 -  헬리콥터 이동 정지 토글 버튼
+        Debug.Log("go = " + go);
+        Debug.Log("nextIndex = " + nextIndex);
+        if (Input.GetKeyDown(KeyCode.A)) // 테스트용 - 루프 On/Off
             go = !go;
 
-        if(go)
-            MoveWayPoint();
+        MoveWayPoint();
     }
 
     void MoveWayPoint()
@@ -41,12 +44,23 @@ public class HelicopterMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Looppoint"))
+        {
+            loopIndex = nextIndex++;
+        }
+
+        if (other.CompareTag("LoopEndpoint"))
+        {
+            if (go)
+                nextIndex++;
+            else
+                nextIndex = loopIndex;
+        }
+
         if (other.CompareTag("Finalpoint"))
         {
-            if (!doLoop)
-                go = false;
-            else
-                nextIndex = 1;
+            nextIndex++;
+            speed = Mathf.Lerp(speed, 0f, 0.8f);
         }
 
         if (other.CompareTag("Waypoint"))
