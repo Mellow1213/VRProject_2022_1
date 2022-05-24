@@ -11,9 +11,12 @@ public class HelicopterMove : MonoBehaviour
     private Transform[] waypoints;
     private int nextIndex = 1;
 
+
     int loopIndex;
 
-    bool go = true;
+    bool loopSwitch = true;
+    bool goSwitch = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +27,16 @@ public class HelicopterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("go = " + go);
-        Debug.Log("nextIndex = " + nextIndex);
-        if (Input.GetKeyDown(KeyCode.A)) // 테스트용 - 루프 On/Off
-            go = !go;
+        Debug.Log("loopSwitch (A) = " + loopSwitch);
+        Debug.Log("goSwitch (S) = " + goSwitch);
+        if (Input.GetKeyDown(KeyCode.A)) // 디버그 - 루프 On/Off
+            loopSwitch = !loopSwitch;
+        if (Input.GetKeyDown(KeyCode.S)) // 디버그 - 이동 On/Off
+            goSwitch = !goSwitch;
 
-        MoveWayPoint();
+
+        if (goSwitch)
+            MoveWayPoint();
     }
 
     void MoveWayPoint()
@@ -51,7 +58,7 @@ public class HelicopterMove : MonoBehaviour
 
         if (other.CompareTag("LoopEndpoint"))
         {
-            if (go)
+            if (loopSwitch)
                 nextIndex++;
             else
                 nextIndex = loopIndex;

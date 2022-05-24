@@ -94,7 +94,7 @@ public class Player_Attack : MonoBehaviour
     IEnumerator Reload()
     {
         isReloading = true;
-        ammo = 50;
+        ammo = 100;
         yield return new WaitForSeconds(1.0f);
         isAmmoEmpty = false;
         isReloading = false;
