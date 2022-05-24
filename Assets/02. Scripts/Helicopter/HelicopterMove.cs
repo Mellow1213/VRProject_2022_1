@@ -17,7 +17,8 @@ public class HelicopterMove : MonoBehaviour
     bool loopEndSwitch = false;
     bool goSwitch = true;
 
-    // Start is called before the first frame update
+
+*+  // Start is called before the first frame update
     void Start()
     {
         playerTransform = GetComponent<Transform>();
