@@ -81,7 +81,7 @@ public class Player_Attack : MonoBehaviour
         tempObject = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
         tempObject.transform.parent = this.transform;
         tempObject = Instantiate(fire_Effect, muzzle_Pos.transform.position, muzzle_Pos.transform.rotation);
-        tempObject.transform.parent = this.transform;
+        tempObject.transform.parent = muzzle_Pos.transform;
 
         ammo--;
         fireRate = 0.08f;

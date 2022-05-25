@@ -28,16 +28,13 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //sin함수 값으로 Flyer가 계속 위아래로 공중부양하듯이 연출
         runningTime += Time.deltaTime * speed;
-        yPos = Mathf.Sin(runningTime) * length * 0.05f;
+        yPos = Mathf.Sin(runningTime) * length * 0.07f;
         this.transform.localPosition = new Vector3(transform.position.x, transform.position.y + yPos, transform.position.z);
-
 
 
         transform.LookAt(playerPos);
         transform.position = Vector3.Lerp(gameObject.transform.position, targetObject.position, 2.0f*Time.deltaTime);
-
-
-
     }
 }

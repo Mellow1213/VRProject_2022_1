@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class a : MonoBehaviour
+public class FlyEnemySpawn : MonoBehaviour
 {
     public GameObject flyerEnemy;
+    float timer = -10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +15,14 @@ public class a : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         //Debug.Log("FlyerSpawn (D)");
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || timer > 10f)
+        {
             Instantiate(flyerEnemy);
+            timer = 0f;
+        }
 
     }
 }
