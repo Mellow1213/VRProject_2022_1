@@ -18,7 +18,6 @@ public class HelicopterMove : MonoBehaviour
     bool goSwitch = true;
 
 
-*+  // Start is called before the first frame update
     void Start()
     {
         playerTransform = GetComponent<Transform>();
