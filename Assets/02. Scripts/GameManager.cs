@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(this.gameObject);
+
+        score = 1000;
     }
     public static GameManager Instance
     {
@@ -29,11 +31,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int score = 0;
+    public int score;
     public int playerHealth;
 
     private void Update()
     {
-        Debug.Log("현재 점수 : " + score);
     }
 }

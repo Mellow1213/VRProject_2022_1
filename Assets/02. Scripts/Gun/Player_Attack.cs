@@ -97,7 +97,7 @@ public class Player_Attack : MonoBehaviour
             isGunSpinned = true;
             if (gunRotateSpeed <= 15f )
             {
-                gunRotateSpeed += Time.deltaTime * 16;
+                gunRotateSpeed += Time.deltaTime * 20f;
             }
         }
         else

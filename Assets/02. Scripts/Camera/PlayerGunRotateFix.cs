@@ -31,7 +31,7 @@ public class PlayerGunRotateFix : MonoBehaviour
     {
         RaycastHit hit;
 
-        int layerMask = 1 << 9; // 레이어 마스크를 비트 연산을 통해 GunFixArea만 인식하도록 설정하는 변수
+        int layerMask = 1 << LayerMask.NameToLayer("GunFixArea"); ; // 레이어 마스크를 비트 연산을 통해 GunFixArea만 인식하도록 설정하는 변수
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 30f, layerMask))
         {
             permissionToFire = true;
