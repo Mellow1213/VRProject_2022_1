@@ -20,9 +20,11 @@ public class Player_Attack : MonoBehaviour
     public GameObject playerGunRotateFixObject;
 
     AudioSource audioSource;
+    public AudioClip WinDown;
 
-    public float fireRate; // 발사 속도, 발사와 발사 사이 간격
-    public int ammo; // 탄창 수
+
+    private float fireRate; // 발사 속도, 발사와 발사 사이 간격
+    private int ammo; // 탄창 수
 
     float gunRotateSpeed;
 
@@ -32,6 +34,7 @@ public class Player_Attack : MonoBehaviour
 
     bool isAmmoEmpty = false;
     bool isReloading = false;
+    bool isGunSpinned = false;
 
     void Start()
     {
@@ -45,12 +48,10 @@ public class Player_Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         // 총 발사 간격 계산
         if (fireRate >= -1f)
             fireRate -= Time.deltaTime;
-        
+
         // 탄창이 비었는지 확인
         if (ammo < 0 && !isReloading)
         {
@@ -90,13 +91,30 @@ public class Player_Attack : MonoBehaviour
 
     void GunRotate()
     {
-        // 마우스를 누르고 있고, 총알이 비어있지 않으며, 총이 발사 가능 화면 안에 있을 때 총열 회전.  + 총열이 일정 수준 이상 빠르게 돌지 않음.
-        if (Input.GetMouseButton(0) && !isAmmoEmpty && playerGunRotateFix.getPermissionToFire() && gunRotateSpeed <= 15f) 
-            gunRotateSpeed += Time.deltaTime * 8;
-        else if (gunRotateSpeed > 0) // 총의 속도는 0 이하로 내려가지 않음.
-            gunRotateSpeed -= Time.deltaTime * 20;
+        // 마우스를 누르고 있고, 총알이 비어있지 않으며, 총열이 일정 수준 이상 빠르게 돌지 않음.
+        if ((Input.GetMouseButton(0) && !isAmmoEmpty )&& playerGunRotateFix.getPermissionToFire())
+        {
+            isGunSpinned = true;
+            if (gunRotateSpeed <= 15f )
+            {
+                gunRotateSpeed += Time.deltaTime * 16;
+            }
+        }
+        else
+        {
+            if (isGunSpinned && gunRotateSpeed >= 10f)
+            {
+                audioSource.PlayOneShot(WinDown);
+                isGunSpinned = false;
+            }
+            // 마우스를 뗐을 때. 총의 속도는 0 이하로 내려가지 않음.
+            if (gunRotateSpeed > 0)
+            {
+                gunRotateSpeed -= Time.deltaTime * 10;
+            }
+        }
 
-        if (gunRotateSpeed <= 0) // 회전이 멈췄을 때 gunRotateSpeed값이 음수라면 0으로 보정
+        if (gunRotateSpeed <= 0.05f) // 회전이 멈췄을 때 gunRotateSpeed값이 음수라면 0으로 보정
             gunRotateSpeed = 0f;
 
         minigun_head.transform.Rotate(Vector3.up * gunRotateSpeed);
@@ -106,7 +124,7 @@ public class Player_Attack : MonoBehaviour
     {
         isReloading = true;
         ammo = 100;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.5f);
         isAmmoEmpty = false;
         isReloading = false;
     }
