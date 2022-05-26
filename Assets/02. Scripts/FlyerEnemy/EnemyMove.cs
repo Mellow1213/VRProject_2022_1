@@ -10,7 +10,6 @@ public class EnemyMove : MonoBehaviour
     Transform targetObject;
     Transform playerPos;
 
-
     [SerializeField]  private float speed = 1f;
     [SerializeField]  private float length = 1f;
     private float runningTime = 0f;

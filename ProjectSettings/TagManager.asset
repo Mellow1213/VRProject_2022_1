@@ -10,6 +10,7 @@ TagManager:
   - FxTemporaire
   - Looppoint
   - LoopEndpoint
+  - Bullet
   layers:
   - Default
   - TransparentFX

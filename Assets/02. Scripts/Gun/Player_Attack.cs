@@ -105,6 +105,7 @@ public class Player_Attack : MonoBehaviour
             if (isGunSpinned && gunRotateSpeed >= 10f)
             {
                 audioSource.PlayOneShot(WinDown);
+                DeleteChilds(muzzle_Pos);
                 isGunSpinned = false;
             }
             // 마우스를 뗐을 때. 총의 속도는 0 이하로 내려가지 않음.
@@ -124,8 +125,21 @@ public class Player_Attack : MonoBehaviour
     {
         isReloading = true;
         ammo = 100;
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.5f);
         isAmmoEmpty = false;
         isReloading = false;
+    }
+    public void DeleteChilds(GameObject target)
+    {
+        Transform[] child = target.GetComponentsInChildren<Transform>();
+
+        foreach (var iter in child)
+        {
+            // 부모(target)는 삭제 하지 않음
+            if (iter != target.transform)
+            {
+                Destroy(iter.gameObject);
+            }
+        }
     }
 }

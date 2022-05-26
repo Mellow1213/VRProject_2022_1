@@ -7,7 +7,7 @@ public class Status : MonoBehaviour
     [SerializeField] private int HP; // Inspector에서 수정 금지!!
 
     private void Start()
-    {   
+    {
     }
 
     public int getHP()
@@ -22,16 +22,26 @@ public class Status : MonoBehaviour
 
     public void Damaged(int damage)
     {
-        this.HP -= damage;
+        HP -= damage;
     }
+
+
 
     private void Update()
     {
         if (HP < 0)
-        {
-            Destroy(gameObject);
-        }
+            Destroyed();
     }
 
-
+    void Destroyed()
+    {
+        Destroy(transform.parent.gameObject);
+        switch (gameObject.name)
+        {
+            case "FlyerEnemy":
+                GameManager.Instance.score += 50;
+                Debug.Log("FlyerEnemy 파괴, 점수 + 50");
+                break;
+        }
+    }
 }

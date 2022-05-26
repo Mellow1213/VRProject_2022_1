@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8183610650823983837}
   - component: {fileID: 8183610650823983836}
   m_Layer: 9
-  m_Name: Enemy
+  m_Name: FlyerEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,8 +86,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8183610651115782631}
   - component: {fileID: 8183610651115782630}
+  - component: {fileID: 1824161523550270499}
   m_Layer: 9
-  m_Name: EnemyPos
+  m_Name: FlyerEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,6 +124,19 @@ MonoBehaviour:
   enemyPosition: {fileID: 0}
   speed: 1
   length: 1
+--- !u!65 &1824161523550270499
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183610651115782552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.59061, y: 6.69389, z: 19.67973}
+  m_Center: {x: 0, y: -0.1334534, z: -0.491024}
 --- !u!1001 &8183610650511825162
 PrefabInstance:
   m_ObjectHideFlags: 0
