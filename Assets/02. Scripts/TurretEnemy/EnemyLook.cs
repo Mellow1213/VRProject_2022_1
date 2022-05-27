@@ -9,7 +9,7 @@ public class EnemyLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("House Big");
+        target = GameObject.FindGameObjectWithTag("Shelter");
     }
 
     // Update is called once per frame
