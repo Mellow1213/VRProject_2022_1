@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Player_Attack : MonoBehaviour
 {
@@ -22,6 +24,8 @@ public class Player_Attack : MonoBehaviour
     AudioSource audioSource;
     public AudioClip WinDown;
 
+    public Image ammoImage;
+    public TextMeshProUGUI leftAmmoText;
 
     private float fireRate; // 발사 속도, 발사와 발사 사이 간격
     private int ammo; // 탄창 수
@@ -40,7 +44,7 @@ public class Player_Attack : MonoBehaviour
     {
         playerGunRotateFix = playerGunRotateFixObject.GetComponent<PlayerGunRotateFix>();
         audioSource = GetComponent<AudioSource>();
-        ammo = 50;
+        ammo = GameManager.Ammo;
         firepos = fire_Pos.GetComponent<Transform>();
         gunRotateSpeed = 0;
     }
@@ -55,6 +59,7 @@ public class Player_Attack : MonoBehaviour
         // 탄창이 비었는지 확인
         if (ammo < 0 && !isReloading)
         {
+            ammo = 0;
             isAmmoEmpty = true;
         }
 
@@ -124,8 +129,8 @@ public class Player_Attack : MonoBehaviour
     IEnumerator Reload()
     {
         isReloading = true;
-        ammo = 100;
         yield return new WaitForSecondsRealtime(1.5f);
+        ammo = GameManager.Ammo;
         isAmmoEmpty = false;
         isReloading = false;
     }
@@ -141,5 +146,20 @@ public class Player_Attack : MonoBehaviour
                 Destroy(iter.gameObject);
             }
         }
+    }
+
+    void AmmoUI()
+    {
+        float leftAmmo = ammo / (float)GameManager.Ammo;
+        if(isReloading)
+            leftAmmoText.text = "Reloading...";
+        else
+            leftAmmoText.text = "Left Ammo : " + ammo;
+        ammoImage.fillAmount = leftAmmo;
+    }
+
+    private void FixedUpdate()
+    {
+        AmmoUI();
     }
 }

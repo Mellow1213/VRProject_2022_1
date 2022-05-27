@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     public int score;
     public int playerHealth;
+    public const int Ammo = 200;
 
     float fixedtime;
     private void Update()
