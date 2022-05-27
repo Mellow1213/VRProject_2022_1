@@ -50,7 +50,7 @@ public class Player_Attack : MonoBehaviour
     {
         // 총 발사 간격 계산
         if (fireRate >= -1f)
-            fireRate -= Time.deltaTime;
+            fireRate -= Time.unscaledDeltaTime;
 
         // 탄창이 비었는지 확인
         if (ammo < 0 && !isReloading)
@@ -97,7 +97,7 @@ public class Player_Attack : MonoBehaviour
             isGunSpinned = true;
             if (gunRotateSpeed <= 15f )
             {
-                gunRotateSpeed += Time.deltaTime * 20f;
+                gunRotateSpeed += Time.unscaledDeltaTime * 20f;
             }
         }
         else
@@ -111,7 +111,7 @@ public class Player_Attack : MonoBehaviour
             // 마우스를 뗐을 때. 총의 속도는 0 이하로 내려가지 않음.
             if (gunRotateSpeed > 0)
             {
-                gunRotateSpeed -= Time.deltaTime * 10;
+                gunRotateSpeed -= Time.unscaledDeltaTime * 10;
             }
         }
 
@@ -125,7 +125,7 @@ public class Player_Attack : MonoBehaviour
     {
         isReloading = true;
         ammo = 100;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSecondsRealtime(1.5f);
         isAmmoEmpty = false;
         isReloading = false;
     }

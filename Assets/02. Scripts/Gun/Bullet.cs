@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * bullet_Speed * Time.deltaTime ;
+        transform.position += transform.forward * bullet_Speed * Time.unscaledDeltaTime ;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour
         if(!(collision.gameObject.GetComponent<Status>() is null)){
             Status status = collision.gameObject.GetComponent<Status>();
             status.Damaged(bulletDamage);
+            Debug.Log("맞고난 후 = " + status.getHP());
         }
         Destroy(gameObject);
     }
