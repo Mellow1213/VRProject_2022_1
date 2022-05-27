@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 20
+  fireEffect: {fileID: 100006, guid: a49596ebf788acd4ab1281bffea444b1, type: 3}
 --- !u!54 &5152745078812815864
 Rigidbody:
   m_ObjectHideFlags: 0
