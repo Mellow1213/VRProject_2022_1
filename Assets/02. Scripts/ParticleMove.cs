@@ -22,7 +22,6 @@ public class ParticleMove : MonoBehaviour
     {
         GameObject b = Instantiate(hitEffect, transform.position, transform.rotation);
         Destroy(b, 2.0f);
-        Debug.Log("왜 안맞냐고");
         if (!(collision.gameObject.GetComponent<Status>() is null))
         {
             Status status = collision.gameObject.GetComponent<Status>();
