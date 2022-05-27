@@ -20,10 +20,15 @@ public class PartnerCtrl : MonoBehaviour
 
     float fireDelay = 0f;
 
+    public GameObject firePos;
+    public GameObject gaugeEffect;
+    public GameObject fireEffect;
+
     Quaternion originRotation;
     Quaternion recoilRotation;
     Quaternion assistRotation;
     Quaternion assistFireRotation;
+
     bool isRecoil = false; // 반동
     bool isAssist = false;
     bool isAssistFired = false;
@@ -109,10 +114,14 @@ public class PartnerCtrl : MonoBehaviour
     {
 
         audiosource.PlayOneShot(assistGauge);
+        GameObject a = Instantiate(gaugeEffect);
+        a.transform.SetParent(firePos.transform, false);
         Debug.Log("발사 준비 이펙트");
         yield return new WaitForSeconds(3.5f);
         isAssistFired = true;
         audiosource.PlayOneShot(assistFire);
+        GameObject b = Instantiate(fireEffect);
+        b.transform.SetParent(firePos.transform, false);
         Debug.Log("발사 이펙트!!");
         yield return new WaitForSeconds(0.8f);
         isAssistFired = false;
