@@ -26,6 +26,7 @@ public class Player_Attack : MonoBehaviour
 
     public Image ammoImage;
     public TextMeshProUGUI leftAmmoText;
+    public TextMeshProUGUI scoreText;
 
     private float fireRate; // 발사 속도, 발사와 발사 사이 간격
     private int ammo; // 탄창 수
@@ -160,6 +161,7 @@ public class Player_Attack : MonoBehaviour
 
     private void FixedUpdate()
     {
+        scoreText.text = "Score : " + GameManager.Instance.score;
         AmmoUI();
     }
 }

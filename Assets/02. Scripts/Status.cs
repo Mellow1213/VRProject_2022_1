@@ -35,12 +35,15 @@ public class Status : MonoBehaviour
 
     void Destroyed()
     {
-        Destroy(transform.parent.gameObject);
         switch (gameObject.name)
         {
             case "FlyerEnemy":
+                Destroy(transform.parent.gameObject);
                 GameManager.Instance.score += 50;
                 Debug.Log("FlyerEnemy 파괴, 점수 + 50");
+                break;
+            default:
+                Destroy(gameObject);
                 break;
         }
     }

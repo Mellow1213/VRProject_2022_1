@@ -25,7 +25,6 @@ public class EnemyBulletCtrl : MonoBehaviour
         {
             Instantiate(fireEffect, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
-            Destroy(fireEffect);
         }
     }
 }
