@@ -23,6 +23,7 @@ public class PartnerCtrl : MonoBehaviour
     public GameObject firePos;
     public GameObject gaugeEffect;
     public GameObject fireEffect;
+    public GameObject normalFireEffect;
 
     Quaternion originRotation;
     Quaternion recoilRotation;
@@ -34,6 +35,9 @@ public class PartnerCtrl : MonoBehaviour
     bool isAssistFired = false;
     private bool isStared = false; // 플레이어가 동료를 보고 있는지
 
+    public GameObject assistFirePos;
+    PartnerAssistFire paf;
+
     public void setIsStared(bool isStared)
     {
         this.isStared = isStared;
@@ -42,6 +46,7 @@ public class PartnerCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        paf = assistFirePos.GetComponent<PartnerAssistFire>();
         audiosource = GetComponent<AudioSource>();
         originRotation = Quaternion.Euler(new Vector3(4.86f, -2.30f, 5.73f));
         recoilRotation = Quaternion.Euler(new Vector3(-6.01f, -3.39f, 5.74f));
@@ -76,6 +81,8 @@ public class PartnerCtrl : MonoBehaviour
 
         if (fireDelay > 8f)
         {
+            GameObject a = Instantiate(normalFireEffect);
+            a.transform.SetParent(firePos.transform, false);
             audiosource.PlayOneShot(normalFire);
             isRecoil = true;
             fireDelay = 0f;
@@ -98,7 +105,7 @@ public class PartnerCtrl : MonoBehaviour
     }
     public void AssistFire()
     {
-        if (GameManager.Instance.score >= 100)
+        if (GameManager.Instance.score >= 100 && !fireCoroutine_isRunning)
         {
             isAssist = true;
             StartCoroutine(Fire());
@@ -106,25 +113,35 @@ public class PartnerCtrl : MonoBehaviour
         }
         else
         {
-            Debug.Log("모자르다고!");
+            Debug.Log("발동 불가");
         }
     }
 
+    bool fireCoroutine_isRunning; // 코루틴 실행되고 있는지 확인
     IEnumerator Fire()
     {
-
+        fireCoroutine_isRunning = true;
+        GameManager.Instance.score -= 100;
         audiosource.PlayOneShot(assistGauge);
         GameObject a = Instantiate(gaugeEffect);
         a.transform.SetParent(firePos.transform, false);
         Debug.Log("발사 준비 이펙트");
         yield return new WaitForSeconds(3.5f);
+
+
         isAssistFired = true;
         audiosource.PlayOneShot(assistFire);
         GameObject b = Instantiate(fireEffect);
         b.transform.SetParent(firePos.transform, false);
         Debug.Log("발사 이펙트!!");
+
+
         yield return new WaitForSeconds(0.8f);
         isAssistFired = false;
         isAssist = false;
+
+        StartCoroutine(paf.AssistFire());
+
+        fireCoroutine_isRunning = false;
     }
 }
