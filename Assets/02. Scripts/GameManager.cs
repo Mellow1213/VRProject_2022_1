@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
         score = 1000;
         playerHealth = 200;
+        fixedtime = Time.fixedDeltaTime;
     }
     public static GameManager Instance
     {
@@ -35,14 +36,20 @@ public class GameManager : MonoBehaviour
     public int score;
     public int playerHealth;
 
+    float fixedtime;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
             Time.timeScale = 0.1f;
+            Time.fixedDeltaTime = fixedtime * Time.deltaTime;
         }
         else if (Input.GetKeyDown(KeyCode.O))
+        {
             Time.timeScale = 1f;
-        //Debug.Log(score);
+            Time.fixedDeltaTime = fixedtime;
+        }
+
+
     }
 }
