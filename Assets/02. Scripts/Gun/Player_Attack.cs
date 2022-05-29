@@ -84,13 +84,12 @@ public class Player_Attack : MonoBehaviour
     }
     void Fire()
     {
+        ammo--;
         Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
         tempObject = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
         tempObject.transform.parent = this.transform;
         tempObject = Instantiate(fire_Effect, muzzle_Pos.transform.position, muzzle_Pos.transform.rotation);
         tempObject.transform.parent = muzzle_Pos.transform;
-
-        ammo--;
         fireRate = 0.08f;
         audioSource.PlayOneShot(fireSound);
     }
@@ -161,7 +160,7 @@ public class Player_Attack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        scoreText.text = "Score : " + GameManager.Instance.score;
+        scoreText.text = "Current Score\n" + GameManager.Instance.score;
         AmmoUI();
     }
 }

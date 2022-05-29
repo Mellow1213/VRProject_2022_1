@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8183610650823983838}
   - component: {fileID: 8183610650823983839}
-  - component: {fileID: 8183610650823983837}
   - component: {fileID: 8183610650823983836}
   m_Layer: 0
   m_Name: FlyerEnemy
@@ -47,19 +46,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.590607, y: 6.6938896, z: 19.679726}
   m_Center: {x: 0, y: -0.13345337, z: -0.49102402}
---- !u!114 &8183610650823983837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8183610650823983824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5dd4d3f12d98b44a5661c3b52552e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
 --- !u!54 &8183610650823983836
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -87,6 +73,7 @@ GameObject:
   - component: {fileID: 8183610651115782631}
   - component: {fileID: 8183610651115782630}
   - component: {fileID: 1824161523550270499}
+  - component: {fileID: 8897232373006257791}
   m_Layer: 0
   m_Name: FlyerEnemy
   m_TagString: Untagged
@@ -137,6 +124,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.59061, y: 6.69389, z: 19.67973}
   m_Center: {x: 0, y: -0.1334534, z: -0.491024}
+--- !u!114 &8897232373006257791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183610651115782552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5dd4d3f12d98b44a5661c3b52552e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
 --- !u!1001 &8183610650511825162
 PrefabInstance:
   m_ObjectHideFlags: 0
