@@ -35,15 +35,25 @@ public class PlayerInnerLook : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2));
         
         layerMask = 1 << LayerMask.NameToLayer("Partner");
-        gaugeTimer += Time.deltaTime * 0.75f;
-        if (Physics.Raycast(ray, 8f))
+        gaugeTimer += Time.deltaTime * 1.25f;
+        if (Physics.Raycast(ray, out RaycastHit hitinfo, 8f, layerMask))
         {
             if (pointerGauge.fillAmount >= 1.0f)
             {
                 pc.setIsStared(true);
                 if (Input.GetMouseButtonDown(0))
                 {
-                    pc.AssistFire();
+                    switch (hitinfo.transform.name)
+                    {
+                        case "Partner":
+                            pc.AssistFire();
+                            break;
+                        case "TimeStop":
+                            GameManager.Instance.TimeStop();
+                            break;
+                        case "FlameShot":
+                            break;
+                    }
                 }
             }
         }

@@ -53,7 +53,13 @@ public class GameManager : MonoBehaviour
     public float slowedTimer = 10f;
 
     public const float timeSlowAmmount = 10f;
-    public void TimeSlow()
+
+    public void TimeStop()
+    {
+        score -= 250;
+        slowedTimer = 0f;
+    }
+    void TimeSlow()
     {
         if(slowedTimer < 11)
             slowedTimer += Time.unscaledDeltaTime;

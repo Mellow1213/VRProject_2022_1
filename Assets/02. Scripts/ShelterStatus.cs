@@ -27,7 +27,6 @@ public class ShelterStatus : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
             HP -= 10;
-        Debug.Log(HP);
         if (HP <= 0)
             Explosion();
     }
