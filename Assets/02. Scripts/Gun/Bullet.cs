@@ -23,7 +23,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("충돌?");
         Instantiate(fireEffect.gameObject, transform.position, transform.rotation);
         //Debug.Log("맞은 개체 이름 : " + collision.gameObject.name);
 

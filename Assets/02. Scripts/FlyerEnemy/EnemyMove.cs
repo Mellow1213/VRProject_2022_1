@@ -57,6 +57,9 @@ public class EnemyMove : MonoBehaviour
 
         transform.position = Vector3.Lerp(gameObject.transform.position, enemyPositions[index].position, 1.5f*Time.deltaTime);
 
+    }
+    private void FixedUpdate()
+    {
         if (st.getHP() <= 0)
             em.setEmptyPos(true, index);
     }

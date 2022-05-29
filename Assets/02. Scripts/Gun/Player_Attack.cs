@@ -31,6 +31,8 @@ public class Player_Attack : MonoBehaviour
     private float fireRate; // 발사 속도, 발사와 발사 사이 간격
     private int ammo; // 탄창 수
 
+    float waitingTime = 0;
+
     float gunRotateSpeed;
 
     GameObject tempObject;
@@ -73,13 +75,22 @@ public class Player_Attack : MonoBehaviour
             // 발사 딜레이가 지났고 총이 예열 되었다면 -> 예열되지 않았다면 총알 발사 X
             if (fireRate < 0 && gunRotateSpeed >= 10f)
             {
+                waitingTime = 0f;
                 Fire();
             }
         }
-        // 탄창이 비어있다면
-        else if (isAmmoEmpty)
+        else
         {
-            StartCoroutine(Reload());
+            //총알이 바닥났거나 꽉 차있는 상태가 아니라면, 그리고 재장전 중이 아니라면 대기시간 측정
+            if ((isAmmoEmpty || ammo != GameManager.Ammo) && !isReloading)
+                waitingTime += Time.unscaledDeltaTime;
+
+            // 탄창이 비어있거나 총을 발사하지 않은지 3초가 지나면
+            if (isAmmoEmpty || waitingTime > 3f)
+            {
+                waitingTime = 0f;
+                StartCoroutine(Reload());
+            }
         }
     }
     void Fire()
@@ -97,10 +108,10 @@ public class Player_Attack : MonoBehaviour
     void GunRotate()
     {
         // 마우스를 누르고 있고, 총알이 비어있지 않으며, 총열이 일정 수준 이상 빠르게 돌지 않음.
-        if ((Input.GetMouseButton(0) && !isAmmoEmpty )&& playerGunRotateFix.getPermissionToFire())
+        if ((Input.GetMouseButton(0) && !isAmmoEmpty) && playerGunRotateFix.getPermissionToFire())
         {
             isGunSpinned = true;
-            if (gunRotateSpeed <= 15f )
+            if (gunRotateSpeed <= 15f)
             {
                 gunRotateSpeed += Time.unscaledDeltaTime * 20f;
             }
@@ -125,6 +136,7 @@ public class Player_Attack : MonoBehaviour
 
         minigun_head.transform.Rotate(Vector3.up * gunRotateSpeed);
     }
+
 
     IEnumerator Reload()
     {
@@ -151,7 +163,7 @@ public class Player_Attack : MonoBehaviour
     void AmmoUI()
     {
         float leftAmmo = ammo / (float)GameManager.Ammo;
-        if(isReloading)
+        if (isReloading)
             leftAmmoText.text = "Reloading...";
         else
             leftAmmoText.text = "Left Ammo : " + ammo;

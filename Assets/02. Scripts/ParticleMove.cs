@@ -27,5 +27,6 @@ public class ParticleMove : MonoBehaviour
             Status status = collision.gameObject.GetComponent<Status>();
             status.Damaged(200);
         }
+        Destroy(gameObject);
     }
 }

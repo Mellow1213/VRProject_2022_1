@@ -37,8 +37,8 @@ public class Status : MonoBehaviour
     {
         switch (gameObject.name)
         {
-            case "FlyerEnemy":
-                Destroy(transform.parent.gameObject);
+            case "FlyerEnemy(Clone)":
+                Destroy(gameObject);
                 GameManager.Instance.score += 50;
                 Debug.Log("FlyerEnemy 파괴, 점수 + 50");
                 break;

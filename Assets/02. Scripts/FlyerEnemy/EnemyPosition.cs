@@ -40,8 +40,10 @@ public class EnemyPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         Debug.Log("isEmptyExist = " + isEmptyExist());
         for (int i = 0; i<emptyPos.Length; i++)
             Debug.Log("Index "+i+ " is Empty? : " + emptyPos[i]);
+        */
     }
 }
