@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
 
     public void EnchantedFire()
     {
+        score -= 150;
         useEnchantedBullet = true;
         timer = 0f;
     }
