@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6851761255372592560}
   - component: {fileID: 96141115053784468}
   m_Layer: 10
-  m_Name: Bullet
+  m_Name: EnchantedBullet00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4763991620475279944}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -9.778101, y: -3.5297432, z: 39.25556}
-  m_LocalScale: {x: 0.6622827, y: 0.71627444, z: 3.163132}
+  m_LocalPosition: {x: -9.778101, y: -3.5297432, z: 52.73}
+  m_LocalScale: {x: 1.078182, y: 0.862904, z: 4.2616878}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64c384d78defe6d4498a1d775bfeb155, type: 2}
+  - {fileID: 2100000, guid: 1e652fe5751eb2e4eb949a30afec6b35, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,7 +141,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 63cd169e84d834aee83d78f5d3fede43, type: 2}
+  - {fileID: 2100000, guid: 68cd23dd8f2e94a5a8198b72e5899bce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -169,8 +169,17 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.13259506
-        value: 0.22857666
+        time: 0
+        value: 0.2638889
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.28559875
+        value: 0.70079803
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -178,8 +187,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.43093407
-        value: 0.22857094
+        time: 0.49650872
+        value: 0.39523506
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -187,7 +196,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.90608215
+        time: 0.9293976
         value: 0
         inSlope: 0
         outSlope: 0

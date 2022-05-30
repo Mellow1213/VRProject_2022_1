@@ -7,6 +7,7 @@ using TMPro;
 public class Player_Attack : MonoBehaviour
 {
     public GameObject bullet_Prefab;
+    public GameObject enchantedBulletPrefab;
     public GameObject fire_Pos;
 
     public GameObject bullet_Shell_Prefab;
@@ -96,7 +97,11 @@ public class Player_Attack : MonoBehaviour
     void Fire()
     {
         ammo--;
-        Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
+        if(GameManager.Instance.useEnchantedBullet)
+            Instantiate(enchantedBulletPrefab, firepos.transform.position, firepos.transform.rotation);
+        else
+            Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
+
         tempObject = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
         tempObject.transform.parent = this.transform;
         tempObject = Instantiate(fire_Effect, muzzle_Pos.transform.position, muzzle_Pos.transform.rotation);

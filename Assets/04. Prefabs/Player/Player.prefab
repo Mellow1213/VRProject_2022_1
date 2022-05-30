@@ -2593,6 +2593,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet_Prefab: {fileID: 4763991620475279944, guid: afdb15dc4937b0d44ab293932770aab2,
     type: 3}
+  enchantedBulletPrefab: {fileID: 4763991620475279944, guid: 2f57bfd5d28d7334dad4985a26d4ed5c,
+    type: 3}
   fire_Pos: {fileID: 363278681675139134}
   bullet_Shell_Prefab: {fileID: 1170647774315830, guid: e5bbbbc7c93d27d4f8dd9a9e7b861bfe,
     type: 3}

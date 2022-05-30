@@ -52,6 +52,7 @@ public class PlayerInnerLook : MonoBehaviour
                             GameManager.Instance.TimeStop();
                             break;
                         case "FlameShot":
+                            GameManager.Instance.EnchantedFire();
                             break;
                     }
                 }

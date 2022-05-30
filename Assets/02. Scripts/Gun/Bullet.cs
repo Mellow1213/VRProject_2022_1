@@ -5,12 +5,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     float bullet_Speed;
-    public int bulletDamage;
     public GameObject fireEffect;
     // Start is called before the first frame update
     void Start()
     {
-        bulletDamage = 5;
         bullet_Speed = 800f;
         Destroy(gameObject, 3.0f);
     }
@@ -28,7 +26,7 @@ public class Bullet : MonoBehaviour
 
         if(!(collision.gameObject.GetComponent<Status>() is null)){
             Status status = collision.gameObject.GetComponent<Status>();
-            status.Damaged(bulletDamage);
+            status.Damaged(GameManager.Instance.damage + GameManager.Instance.plusDamage);
         }
         Destroy(gameObject);
     }

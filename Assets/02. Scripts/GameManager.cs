@@ -38,16 +38,27 @@ public class GameManager : MonoBehaviour
     public int score;
     public int playerHealth;
     public const int Ammo = 150;
+    public int damage = 5;
+    public int plusDamage;
 
     float fixedtime;
     float musicSpeed = 1f;
     AudioSource bgm;
     AudioSource heli;
+    public bool useEnchantedBullet = false;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
             slowedTimer = 0f;
-        TimeSlow();
+
+        if(!(bgm is null || heli is null))
+            TimeSlow();
+
+        if(useEnchantedBullet)
+            PlusDamage();
+
+        Debug.Log("plusDamage = " + plusDamage);
+        Debug.Log(timer);
     }
 
     public float slowedTimer = 10f;
@@ -90,5 +101,28 @@ public class GameManager : MonoBehaviour
                 heli.pitch = 1f; 
             }
         }
+    }
+
+    float timer = 15f;
+    void PlusDamage()
+    {
+        Debug.Log("강화중");
+        if(useEnchantedBullet)
+            timer += Time.unscaledDeltaTime;
+        if (timer < 15f)
+        {
+            plusDamage = 5;
+        }
+        else
+        {
+            useEnchantedBullet = false;
+            plusDamage = 0;
+        }
+    }
+
+    public void EnchantedFire()
+    {
+        useEnchantedBullet = true;
+        timer = 0f;
     }
 }
