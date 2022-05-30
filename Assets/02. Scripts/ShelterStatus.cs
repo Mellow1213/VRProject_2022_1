@@ -7,7 +7,7 @@ public class ShelterStatus : MonoBehaviour
     public GameObject explosion;
     private Transform shelter;
     private float HP;
-    public static bool isBoom;
+    public static bool isExplosion;
     private float damage;
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class ShelterStatus : MonoBehaviour
         shelter = this.transform.parent;
         HP = 50.0f;
         damage = 0.5f;
-        isBoom = false;
+        isExplosion = false;
     }
 
     // Update is called once per frame
@@ -37,6 +37,6 @@ public class ShelterStatus : MonoBehaviour
         this.gameObject.SetActive(false);
         explosion.SetActive(true);
         Destroy(shelter.gameObject, 3.0f);
-        isBoom = true;
+        isExplosion = true;
     }
 }

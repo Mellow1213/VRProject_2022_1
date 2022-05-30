@@ -16,7 +16,7 @@ public class EnemyBulletCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ShelterStatus.isBoom)
+        if(ShelterStatus.isExplosion)
         {
             Destroy(this.gameObject);
         }
