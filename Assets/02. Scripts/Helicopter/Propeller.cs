@@ -8,7 +8,6 @@ public class Propeller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rotateSpeed = 1500f;
     }
 
     // Update is called once per frame

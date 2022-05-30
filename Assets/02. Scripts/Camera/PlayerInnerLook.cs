@@ -11,6 +11,8 @@ public class PlayerInnerLook : MonoBehaviour
     public GameObject partner;
     public Image pointerGauge;
     float gaugeTimer = 0f;
+
+    public AudioClip flameShotSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,7 @@ public class PlayerInnerLook : MonoBehaviour
                             GameManager.Instance.TimeStop();
                             break;
                         case "FlameShot":
+                            hitinfo.transform.GetComponent<AudioSource>().PlayOneShot(flameShotSound);
                             GameManager.Instance.EnchantedFire();
                             break;
                     }

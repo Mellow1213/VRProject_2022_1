@@ -13,11 +13,15 @@ public class Player_Attack : MonoBehaviour
     public GameObject bullet_Shell_Prefab;
     public GameObject bullet_Shell_Pos;
 
-    public GameObject fire_Effect;
+    public GameObject normalFireEffect;
+    public GameObject enchantedFireEffect;
+    GameObject fire_Effect;
     public GameObject muzzle_Pos;
 
     public GameObject minigun_head;
-    public AudioClip fireSound;
+    public AudioClip normalFireSound;
+    public AudioClip enchantedFireSound;
+    AudioClip fireSound;
 
     PlayerGunRotateFix playerGunRotateFix;
     public GameObject playerGunRotateFixObject;
@@ -97,10 +101,20 @@ public class Player_Attack : MonoBehaviour
     void Fire()
     {
         ammo--;
-        if(GameManager.Instance.useEnchantedBullet)
+        if (GameManager.Instance.useEnchantedBullet)
+        {
             Instantiate(enchantedBulletPrefab, firepos.transform.position, firepos.transform.rotation);
+            fireSound = enchantedFireSound;
+            fire_Effect = enchantedFireEffect;
+            audioSource.volume = 1f;
+        }
         else
+        {
+            fireSound = normalFireSound;
+            fire_Effect = normalFireEffect;
             Instantiate(bullet_Prefab, firepos.transform.position, firepos.transform.rotation);
+            audioSource.volume = 0.3f;
+        }
 
         tempObject = Instantiate(bullet_Shell_Prefab, bullet_Shell_Pos.transform.position, bullet_Shell_Pos.transform.rotation);
         tempObject.transform.parent = this.transform;
@@ -126,7 +140,6 @@ public class Player_Attack : MonoBehaviour
             if (isGunSpinned && gunRotateSpeed >= 10f)
             {
                 audioSource.PlayOneShot(WinDown);
-                DeleteChilds(muzzle_Pos);
                 isGunSpinned = false;
             }
             // 마우스를 뗐을 때. 총의 속도는 0 이하로 내려가지 않음.
