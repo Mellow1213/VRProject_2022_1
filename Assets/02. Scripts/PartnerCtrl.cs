@@ -14,7 +14,6 @@ public class PartnerCtrl : MonoBehaviour
     public GameObject view;
 
     AudioSource audiosource;
-    public AudioClip normalFire;
     public AudioClip assistGauge;
     public AudioClip assistFire;
 
@@ -83,7 +82,6 @@ public class PartnerCtrl : MonoBehaviour
         {
             GameObject a = Instantiate(normalFireEffect);
             a.transform.SetParent(firePos.transform, false);
-            audiosource.PlayOneShot(normalFire);
             isRecoil = true;
             fireDelay = 0f;
         }
