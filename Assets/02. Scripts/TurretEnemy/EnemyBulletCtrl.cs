@@ -16,7 +16,12 @@ public class EnemyBulletCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += this.transform.forward * bulletSpeed * Time.deltaTime;
+        if(ShelterStatus.isBoom)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+            this.transform.position += this.transform.forward * bulletSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)

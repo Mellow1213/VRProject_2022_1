@@ -6,14 +6,15 @@ public class ShelterStatus : MonoBehaviour
 {
     public GameObject explosion;
     private Transform shelter;
-    private int HP;
+    private float HP;
     public static bool isBoom;
-
+    private float damage;
     // Start is called before the first frame update
     void Start()
     {
         shelter = this.transform.parent;
-        HP = 50;
+        HP = 50.0f;
+        damage = 0.5f;
         isBoom = false;
     }
 
@@ -26,7 +27,7 @@ public class ShelterStatus : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
-            HP -= 0;
+            HP -= damage;
         if (HP <= 0)
             Explosion();
     }
