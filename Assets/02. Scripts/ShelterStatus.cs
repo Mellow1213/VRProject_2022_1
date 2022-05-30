@@ -26,7 +26,7 @@ public class ShelterStatus : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
-            HP -= 10;
+            HP -= 0;
         if (HP <= 0)
             Explosion();
     }

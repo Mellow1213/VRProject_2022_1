@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6594738679716175880
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6594738679716175881}
-  m_Layer: 0
-  m_Name: Shelter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6594738679716175881
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6594738679716175880}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 683, y: -240, z: -6}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_Children:
-  - {fileID: 6594738680899748968}
-  - {fileID: 6599272847822274887}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &6594738679869717537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58,6 +26,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 6594738680899393608}
+--- !u!1 &6594738679716175880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6594738679716175881}
+  m_Layer: 0
+  m_Name: Shelter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &6594738679716175881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594738679716175880}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 683, y: -240, z: -6}
+  m_LocalScale: {x: 0.33333355, y: 0.375, z: 0.42857167}
+  m_Children:
+  - {fileID: 6594738680899748968}
+  - {fileID: 6599272847822274887}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &6594738680899362542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,20 +70,24 @@ PrefabInstance:
       value: WFX_ExplosiveSmoke
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: 57.2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.8
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: -12.2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
       propertyPath: m_LocalRotation.x
@@ -129,6 +133,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4575df893a6e3f64a8283dee38413a34, type: 3}
 --- !u!1 &6594738680899393608 stripped
@@ -157,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 1143307919750216, guid: 3dff328fdba649c44a1d608ec75217d7, type: 3}
       propertyPath: m_TagString
       value: Shelter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143307919750216, guid: 3dff328fdba649c44a1d608ec75217d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4613907555641390, guid: 3dff328fdba649c44a1d608ec75217d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,6 +241,10 @@ PrefabInstance:
     - target: {fileID: 4613907555641390, guid: 3dff328fdba649c44a1d608ec75217d7, type: 3}
       propertyPath: m_LocalScale.z
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991217579983924, guid: 3dff328fdba649c44a1d608ec75217d7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dff328fdba649c44a1d608ec75217d7, type: 3}
