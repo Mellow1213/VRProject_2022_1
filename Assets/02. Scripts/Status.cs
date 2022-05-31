@@ -39,8 +39,16 @@ public class Status : MonoBehaviour
         {
             case "FlyerEnemy(Clone)":
                 Destroy(gameObject);
-                GameManager.Instance.score += 50;
+                GameManager.Instance.score += 100;
                 Debug.Log("FlyerEnemy 파괴, 점수 + 50");
+                break;
+            case "FlyerEnemy2(Clone)":
+                Destroy(gameObject);
+                GameManager.Instance.score += 50;
+                break;
+            case "FlyerEnemy3(Clone)":
+                Destroy(gameObject);
+                GameManager.Instance.score += 20;
                 break;
             default:
                 Destroy(gameObject);

@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
         else
             Destroy(this.gameObject);
 
-        score = 1000;
         playerHealth = 200;
         fixedtime = Time.fixedDeltaTime;
         bgm = GameObject.Find("Player").GetComponent<AudioSource>();
@@ -57,8 +56,6 @@ public class GameManager : MonoBehaviour
         if(useEnchantedBullet)
             PlusDamage();
 
-        Debug.Log("plusDamage = " + plusDamage);
-        Debug.Log(timer);
     }
 
     public float slowedTimer = 10f;

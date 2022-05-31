@@ -12,7 +12,6 @@ public class EnemyMove : MonoBehaviour
     EnemyPosition em;
     int index = 0;
 
-    Transform playerPos;
 
     [SerializeField]  private float speed = 1f;
     [SerializeField]  private float length = 1f;
@@ -23,7 +22,6 @@ public class EnemyMove : MonoBehaviour
     void Start()
     {
         st = GetComponent<Status>();
-        playerPos = GameObject.Find("PlayerPos").GetComponent<Transform>();
         enemyPosition = GameObject.Find("EnemyPosition");
         enemyPositions = enemyPosition.GetComponentsInChildren<Transform>();
 
@@ -47,8 +45,6 @@ public class EnemyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // 계속 플레이어 쳐다보기
-        transform.LookAt(playerPos);
 
         //sin함수 값으로 Flyer가 계속 위아래로 공중부양하듯이 연출
         runningTime += Time.deltaTime * speed;

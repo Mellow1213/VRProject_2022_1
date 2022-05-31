@@ -2897,8 +2897,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9779c3926b7c5342804421c38109b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyerEnemy: {fileID: 8183610651115782552, guid: 5f66285d36e113644ad0cd04e4081ed8,
-    type: 3}
+  flyerEnemy:
+  - {fileID: 8183610651115782552, guid: 5f66285d36e113644ad0cd04e4081ed8, type: 3}
+  - {fileID: 13237758559528525, guid: 0daf0272399888d46ac7606b65c2a441, type: 3}
+  - {fileID: 5122068433530952798, guid: 6754bb427aa3c6949b9a928f15eaf1f9, type: 3}
 --- !u!1 &363278682338681549
 GameObject:
   m_ObjectHideFlags: 0

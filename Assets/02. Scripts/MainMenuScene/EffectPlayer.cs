@@ -28,11 +28,19 @@ public class EffectPlayer : MonoBehaviour
             TimingSec[i] -= 0.25f;
     }
 
+    bool isMenuStart = false;
     // Update is called once per frame
     void Update()
     {
+        if(audsource.isPlaying)
+            MenuStart();
+
+    }
+
+    void MenuStart()
+    {
         skybox.SetFloat("_Rotation", timer * 2);
-        timer += Time.deltaTime;
+            timer += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.A))
             Debug.Log("time = " + timer);
         if (audsource.isPlaying)
@@ -46,8 +54,8 @@ public class EffectPlayer : MonoBehaviour
             if (timer >= TimingSec[3])
             {
                 maincam.clearFlags = CameraClearFlags.Skybox;
-                skybox.SetFloat("_Exposure", Mathf.Lerp(RenderSettings.skybox.GetFloat("_Exposure"), 1f, 2.5f* Time.deltaTime));
-                RenderSettings.ambientIntensity = Mathf.Lerp(RenderSettings.ambientIntensity, 8, 2.5f*Time.deltaTime);
+                skybox.SetFloat("_Exposure", Mathf.Lerp(RenderSettings.skybox.GetFloat("_Exposure"), 1f, 2.5f * Time.deltaTime));
+                RenderSettings.ambientIntensity = Mathf.Lerp(RenderSettings.ambientIntensity, 8, 2.5f * Time.deltaTime);
             }
             if (timer >= TimingSec[4])
             {
@@ -61,6 +69,5 @@ public class EffectPlayer : MonoBehaviour
 
             }
         }
-
     }
 }
