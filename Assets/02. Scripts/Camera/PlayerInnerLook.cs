@@ -51,11 +51,15 @@ public class PlayerInnerLook : MonoBehaviour
                             pc.AssistFire();
                             break;
                         case "TimeStop":
-                            GameManager.Instance.TimeStop();
+                            if ( GameManager.Instance.score >= 250)
+                                GameManager.Instance.TimeStop();
                             break;
                         case "FlameShot":
-                            hitinfo.transform.GetComponent<AudioSource>().PlayOneShot(flameShotSound);
-                            GameManager.Instance.EnchantedFire();
+                            if(GameManager.Instance.score >= 150)
+                            {
+                                hitinfo.transform.GetComponent<AudioSource>().PlayOneShot(flameShotSound);
+                                GameManager.Instance.EnchantedFire();
+                            }
                             break;
                     }
                 }
