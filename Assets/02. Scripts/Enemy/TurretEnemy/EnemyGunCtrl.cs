@@ -6,6 +6,7 @@ public class EnemyGunCtrl : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject bulletSpawn;
+    public AudioClip fireSound;
     private bool isFire;
 
     // Start is called before the first frame update
@@ -30,7 +31,8 @@ public class EnemyGunCtrl : MonoBehaviour
 
     IEnumerator Fire()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(10.0f);
+        bulletSpawn.GetComponent<AudioSource>().PlayOneShot(fireSound);
         Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
 
         isFire = false;    

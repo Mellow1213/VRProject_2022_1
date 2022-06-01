@@ -6,6 +6,7 @@ using UnityEngine;
 public class ExplosiveCtrl : MonoBehaviour
 {
     public GameObject explosion;
+    public AudioClip explosionSound;
     private Transform explosive;
     private Status st;
 
@@ -28,6 +29,7 @@ public class ExplosiveCtrl : MonoBehaviour
 
     public void Explosion()
     {
+        explosive.gameObject.GetComponent<AudioSource>().PlayOneShot(explosionSound);
         this.gameObject.SetActive(false);
         explosion.SetActive(true);
         Destroy(explosive.gameObject, 2.0f);

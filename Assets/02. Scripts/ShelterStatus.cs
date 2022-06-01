@@ -5,10 +5,12 @@ using UnityEngine;
 public class ShelterStatus : MonoBehaviour
 {
     public GameObject explosion;
+    public AudioClip explosionSound;
     private Transform shelter;
     private float HP;
     public static bool isExplosion;
     private float damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class ShelterStatus : MonoBehaviour
 
     void Explosion()
     {
+        shelter.gameObject.GetComponent<AudioSource>().PlayOneShot(explosionSound);
         this.gameObject.SetActive(false);
         explosion.SetActive(true);
         Destroy(shelter.gameObject, 3.0f);

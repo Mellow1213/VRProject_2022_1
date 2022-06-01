@@ -2431,6 +2431,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map3
       objectReference: {fileID: 0}
+    - target: {fileID: 3518282110005931735, guid: bb97797a997a9dc48915bd2da0038c61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3518282110005931734, guid: bb97797a997a9dc48915bd2da0038c61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2845,6 +2850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map4
       objectReference: {fileID: 0}
+    - target: {fileID: 6281150266197542143, guid: ed40f182b01af434eafab1cbc9160696,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 41577874948371817, guid: ed40f182b01af434eafab1cbc9160696,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2911,6 +2921,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1532464192617929830, guid: ed40f182b01af434eafab1cbc9160696,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951215358789070735, guid: ed40f182b01af434eafab1cbc9160696,
         type: 3}
       propertyPath: m_IsActive
       value: 0
