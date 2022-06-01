@@ -558,7 +558,6 @@ GameObject:
   - component: {fileID: 121522777}
   - component: {fileID: 121522779}
   - component: {fileID: 121522778}
-  - component: {fileID: 121522781}
   - component: {fileID: 121522780}
   m_Layer: 0
   m_Name: MapCtrlPoint (5)
@@ -622,20 +621,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyMapIndex: 6
   createMapIndex: 9
---- !u!114 &121522781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121522776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyMapIndex: 0
-  createMapIndex: 0
 --- !u!1 &139812610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6594738681712596577, guid: 41b5826d26e4ec246aac243bafb8da27,
