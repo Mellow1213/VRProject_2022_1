@@ -4054,7 +4054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47, y: 1131}
+  m_AnchoredPosition: {x: 47, y: 1294}
   m_SizeDelta: {x: 295.9, y: 201.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8877610532752985558
@@ -4083,7 +4083,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cost 250
+  m_text: 'Super Shot
+
+    Cost 250'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b29a8d55da798d640835053412b3b7a8, type: 2}
   m_sharedMaterial: {fileID: 21739367656497778, guid: b29a8d55da798d640835053412b3b7a8,
@@ -4126,10 +4128,10 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 5
+  m_firstOverflowCharacterIndex: 11
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4153,10 +4155,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3539084743431472390}
-    characterCount: 8
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -5410,7 +5412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47, y: 1131}
+  m_AnchoredPosition: {x: 47, y: 1307}
   m_SizeDelta: {x: 295.9, y: 201.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2154614598482468060
@@ -5439,7 +5441,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cost 150
+  m_text: 'Time Slow
+
+    Cost 150'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b29a8d55da798d640835053412b3b7a8, type: 2}
   m_sharedMaterial: {fileID: 21739367656497778, guid: b29a8d55da798d640835053412b3b7a8,
@@ -5482,10 +5486,10 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 5
+  m_firstOverflowCharacterIndex: 10
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5509,10 +5513,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2075301621761462041}
-    characterCount: 8
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 2
     pageCount: 1

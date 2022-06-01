@@ -8,6 +8,7 @@ public class StartSceneLook : MonoBehaviour
     public Image gauge;
     float timer = 0;
     private Vector3 screencenter;
+    public GameObject a;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,15 @@ public class StartSceneLook : MonoBehaviour
                 timer += Time.deltaTime;
 
                 if (gauge.fillAmount > 0.99f && Input.GetMouseButtonDown(0))
-                    SceneManager.LoadScene("TestScene");
+                {
+                    if (!(GameObject.Find("Button") is null))
+                    {
+                        a.SetActive(true);
+                        GameObject.Find("Button").SetActive(false);
+                    }
+                    else
+                        SceneManager.LoadScene("TestScene");
+                }
 
             }
         }
