@@ -334,6 +334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 30
+  DeathEffect: {fileID: 100008, guid: fafeb973cad62304ba2abdc5dfafbf8f, type: 3}
+  deathSound: {fileID: 8300000, guid: 54bd6412f9cdab6479b6bd7f8d4ec97b, type: 3}
+  score: 30
 --- !u!65 &8618600589106516008
 BoxCollider:
   m_ObjectHideFlags: 0
