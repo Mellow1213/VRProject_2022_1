@@ -7,7 +7,7 @@ public class ShelterStatus : MonoBehaviour
     public GameObject explosion;
     public AudioClip explosionSound;
     private Transform shelter;
-    private float HP;
+    public float HP;
     public static bool isExplosion;
     private float damage;
 
@@ -15,8 +15,7 @@ public class ShelterStatus : MonoBehaviour
     void Start()
     {
         shelter = this.transform.parent;
-        HP = 50.0f;
-        damage = 0.5f;
+        damage = 1.0f;
         isExplosion = false;
     }
 

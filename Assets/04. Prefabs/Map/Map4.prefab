@@ -2405,6 +2405,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Shelter
       objectReference: {fileID: 0}
+    - target: {fileID: 7816816654082704360, guid: 5b43f80804c87a84bbee56487146055c,
+        type: 3}
+      propertyPath: HP
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b43f80804c87a84bbee56487146055c, type: 3}
 --- !u!4 &6314210353268685554 stripped

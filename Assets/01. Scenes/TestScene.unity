@@ -890,11 +890,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map2
       objectReference: {fileID: 0}
-    - target: {fileID: 593469111977018215, guid: 41b5826d26e4ec246aac243bafb8da27,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6715195010022981233, guid: 41b5826d26e4ec246aac243bafb8da27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -950,16 +945,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1273955727, guid: 41b5826d26e4ec246aac243bafb8da27, type: 3}
-      propertyPath: MinDistance
-      value: 124.92062
-      objectReference: {fileID: 0}
-    - target: {fileID: 1273955727, guid: 41b5826d26e4ec246aac243bafb8da27, type: 3}
-      propertyPath: m_Volume
-      value: 0.05
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1273955728, guid: 41b5826d26e4ec246aac243bafb8da27, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b5826d26e4ec246aac243bafb8da27, type: 3}
 --- !u!1 &222454422 stripped
 GameObject:
