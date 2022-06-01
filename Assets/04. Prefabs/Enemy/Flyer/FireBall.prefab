@@ -18841,6 +18841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5e1780b993ab84da15458864a61501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FireEffect: {fileID: 100008, guid: fafeb973cad62304ba2abdc5dfafbf8f, type: 3}
+  fireDamage: 3
+  fireSound: {fileID: 8300000, guid: ed67db8391be85c49b62fb7829a49e8a, type: 3}
 --- !u!54 &54139172913934800
 Rigidbody:
   m_ObjectHideFlags: 0

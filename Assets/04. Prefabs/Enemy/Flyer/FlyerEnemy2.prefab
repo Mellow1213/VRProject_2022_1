@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 13237758559528563}
   - component: {fileID: 13237758559528562}
   - component: {fileID: 13237758559528566}
+  - component: {fileID: 114275941619185760}
   m_Layer: 0
   m_Name: FlyerEnemy2
   m_TagString: Untagged
@@ -31,7 +32,6 @@ Transform:
   m_LocalScale: {x: 6.8449, y: 6.8449, z: 6.8449}
   m_Children:
   - {fileID: 7730095984502973737}
-  - {fileID: 3636856081101100411}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 5.3290005, z: 0}
@@ -82,6 +82,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114275941619185760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13237758559528525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330e44e2cc610fd49a213b9142fdca84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireEffect: {fileID: 100000, guid: 2d8c5f91dba7c374a92b66f087fb0e89, type: 3}
+  fireRate: 8
+  firePos: {fileID: 4313846758097565132}
+  fireDamage: 0.8
+  fireSound: {fileID: 8300000, guid: e642001f413f7a24badc2180113ded92, type: 3}
 --- !u!1 &4313846758097565132
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,13 +122,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4313846758097565132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.038, y: -0.502, z: -0.045}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.10303442, y: -0.9849057, z: -0.011406398, w: 0.13861696}
+  m_LocalPosition: {x: 0.004286765, y: -0.051627167, z: 0.09700161}
+  m_LocalScale: {x: 0.00540521, y: 0.0054052146, z: 0.0054052104}
   m_Children: []
-  m_Father: {fileID: 13237758559528561}
+  m_Father: {fileID: 7730095984502973737}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.349, y: -164.014, z: -11.895}
 --- !u!1 &9103050144998068828
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +159,7 @@ Transform:
   m_LocalScale: {x: 10.493397, y: 10.493386, z: 10.493399}
   m_Children:
   - {fileID: 13237757228129425}
+  - {fileID: 3636856081101100411}
   m_Father: {fileID: 13237758559528561}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

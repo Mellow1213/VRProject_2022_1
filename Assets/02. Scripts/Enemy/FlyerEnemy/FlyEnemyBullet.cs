@@ -7,6 +7,10 @@ public class FlyEnemyBullet : MonoBehaviour
     GameObject hitPoint;
     float speed = 0;
     CountLeftEnemy player;
+    public GameObject FireEffect;
+    public float fireDamage;
+
+    public AudioClip fireSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,7 @@ public class FlyEnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, hitPoint.transform.position, Mathf.Lerp(speed, 6f, 3*Time.deltaTime));
+        transform.position = Vector3.MoveTowards(transform.position, hitPoint.transform.position, Mathf.Lerp(speed, 6f, 10*Time.deltaTime));
 
         transform.LookAt(hitPoint.transform);
     }
@@ -27,8 +31,10 @@ public class FlyEnemyBullet : MonoBehaviour
         if (collision.gameObject.Equals(hitPoint))
         {
             Debug.Log("확인");
+            Instantiate(FireEffect, transform.position, transform.rotation);
             Destroy(gameObject);
-            player.playerHP -= 5f;
+            player.GetComponent<AudioSource>().PlayOneShot(fireSound);
+            player.playerHP -= fireDamage;
         }
     }
 }
