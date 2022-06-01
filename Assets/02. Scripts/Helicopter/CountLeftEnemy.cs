@@ -51,7 +51,6 @@ public class CountLeftEnemy : MonoBehaviour
         else
             hm.loopEndSwitch = false;
 
-        Debug.Log("ps.shelters[2].activeSelf = " + ps.shelters[2].activeSelf);
 
     }
 
