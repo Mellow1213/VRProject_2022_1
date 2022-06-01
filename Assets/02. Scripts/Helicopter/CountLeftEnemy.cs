@@ -12,6 +12,8 @@ public class CountLeftEnemy : MonoBehaviour
     public TextMeshProUGUI[] shelterHP;
     public TextMeshProUGUI playerHPUI;
 
+    public GameObject[] Mapis;
+
     HelicopterMove hm;
     Progress_Stage01 ps;
 
@@ -62,17 +64,17 @@ public class CountLeftEnemy : MonoBehaviour
 
     void ShelterHP()
     {
-
-        shelterHP[0].text = "Shelter1 / " + ss1.getShelterHP();
-
-
-        if (ps.shelters[1].transform.parent.gameObject.activeSelf)
+        if(Mapis[0].activeSelf)
+                shelterHP[0].text = "Shelter1 / " + ss1.getShelterHP();
+        else
+            shelterHP[0].text = "Shelter1 / " + "Not Detected";
+        if (Mapis[1].activeSelf)
             shelterHP[1].text = "Shelter2 / " + ss2.getShelterHP();
         else
             shelterHP[1].text = "Shelter2 / " + "Not Detected";
 
 
-        if (ps.shelters[2].transform.parent.gameObject.activeSelf)
+        if (Mapis[2].activeSelf)
             shelterHP[2].text = "Shelter3 / " + ss3.getShelterHP();
         else
             shelterHP[2].text = "Shelter3 / " + "Not Detected";

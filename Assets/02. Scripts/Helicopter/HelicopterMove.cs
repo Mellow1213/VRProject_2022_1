@@ -31,7 +31,6 @@ public class HelicopterMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S)) // 디버그 - 이동 On/Off
             goSwitch = !goSwitch;
 
-        Debug.Log("loopEndSwitch" + loopEndSwitch);
 
         if (goSwitch)
             MoveWayPoint();

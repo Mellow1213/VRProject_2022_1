@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if(!(bgm is null || heli is null))
+        if(!(bgm is null || heli is null) && !isGameEnd)
             TimeSlow();
 
         if(useEnchantedBullet)
@@ -122,18 +122,13 @@ public class GameManager : MonoBehaviour
         timer = 0f;
     }
 
+    bool isGameEnd = false;
     float gameoverTimer = 0f;
     public void GameOver()
     {
-        Time.timeScale = 0f;
+        isGameEnd = true;
         gameoverTimer += Time.unscaledDeltaTime;
         Debug.Log(gameoverTimer);
     }
 
-    private void FixedUpdate()
-    {
-
-        if (Input.GetKeyDown(KeyCode.P))
-            GameOver();
-    }
 }

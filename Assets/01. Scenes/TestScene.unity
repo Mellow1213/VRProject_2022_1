@@ -3173,12 +3173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointColor: {r: 0, g: 1, b: 0, a: 1}
   radius: 1.5
---- !u!1 &1556692512 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6077949429270215573, guid: ed40f182b01af434eafab1cbc9160696,
-    type: 3}
-  m_PrefabInstance: {fileID: 6391911175701201616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1568324908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,12 +3371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointColor: {r: 0, g: 1, b: 0, a: 1}
   radius: 1.5
---- !u!1 &1702660292 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4611103193706074789, guid: 9e7586e8047760244a35b02175261555,
-    type: 3}
-  m_PrefabInstance: {fileID: 746253294530056094}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1714262273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9031292424331305510, guid: 648e54e2f89518446b0ad0b054d000dc,
@@ -4084,6 +4072,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7746427993880327799, guid: 0548632233f386a449750b5f5951bf39,
+        type: 3}
+      propertyPath: Mapis.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746427993880327799, guid: 0548632233f386a449750b5f5951bf39,
+        type: 3}
+      propertyPath: Mapis.Array.data[0]
+      value: 
+      objectReference: {fileID: 1307518153}
+    - target: {fileID: 7746427993880327799, guid: 0548632233f386a449750b5f5951bf39,
+        type: 3}
+      propertyPath: Mapis.Array.data[1]
+      value: 
+      objectReference: {fileID: 6281150265559336895}
+    - target: {fileID: 7746427993880327799, guid: 0548632233f386a449750b5f5951bf39,
+        type: 3}
+      propertyPath: Mapis.Array.data[2]
+      value: 
+      objectReference: {fileID: 1395887722}
     - target: {fileID: 9210460482565531485, guid: 0548632233f386a449750b5f5951bf39,
         type: 3}
       propertyPath: m_textInfo.characterCount
