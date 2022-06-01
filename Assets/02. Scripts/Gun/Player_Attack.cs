@@ -127,7 +127,7 @@ public class Player_Attack : MonoBehaviour
     void GunRotate()
     {
         // 마우스를 누르고 있고, 총알이 비어있지 않으며, 총열이 일정 수준 이상 빠르게 돌지 않음.
-        if ((Input.GetMouseButton(0) && !isAmmoEmpty) && playerGunRotateFix.getPermissionToFire())
+        if (Input.GetMouseButton(0) && !isAmmoEmpty && playerGunRotateFix.getPermissionToFire())
         {
             isGunSpinned = true;
             if (gunRotateSpeed <= 15f)
@@ -137,7 +137,7 @@ public class Player_Attack : MonoBehaviour
         }
         else
         {
-            if (isGunSpinned && gunRotateSpeed >= 10f)
+            if ((isGunSpinned && gunRotateSpeed >= 10f) || Input.GetMouseButtonUp(0))
             {
                 audioSource.PlayOneShot(WinDown);
                 isGunSpinned = false;
