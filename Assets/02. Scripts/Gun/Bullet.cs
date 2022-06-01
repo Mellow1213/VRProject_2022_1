@@ -22,7 +22,6 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(fireEffect.gameObject, transform.position, transform.rotation);
-        Debug.Log("맞은 개체 이름 : " + collision.gameObject.name);
 
         if(!(collision.gameObject.GetComponent<Status>() is null)){
             Status status = collision.gameObject.GetComponent<Status>();
