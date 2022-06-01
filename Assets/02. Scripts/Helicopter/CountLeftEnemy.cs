@@ -9,7 +9,7 @@ public class CountLeftEnemy : MonoBehaviour
     GameObject[] leftEnemy;
 
     public TextMeshProUGUI leftEnemyUI;
-    public TextMeshProUGUI shelterHP;
+    public TextMeshProUGUI[] shelterHP;
     public TextMeshProUGUI playerHPUI;
 
     HelicopterMove hm;
@@ -29,8 +29,8 @@ public class CountLeftEnemy : MonoBehaviour
         SearchEnemy();
         playerHP = 100f;
         ss1 = ps.shelters[0].transform.GetChild(1).GetComponent<ShelterStatus>();
-        ss2 = ps.shelters[0].transform.GetChild(0).GetComponent<ShelterStatus>();
-        ss2 = ps.shelters[0].transform.GetChild(0).GetComponent<ShelterStatus>();
+        ss2 = ps.shelters[1].transform.GetChild(0).GetComponent<ShelterStatus>();
+        ss3 = ps.shelters[2].transform.GetChild(0).GetComponent<ShelterStatus>();
     }
 
     // Update is called once per frame
@@ -50,7 +50,9 @@ public class CountLeftEnemy : MonoBehaviour
             hm.loopEndSwitch = true;
         else
             hm.loopEndSwitch = false;
-        
+
+        Debug.Log("ps.shelters[2].activeSelf = " + ps.shelters[2].activeSelf);
+
     }
 
     void SearchEnemy()
@@ -61,10 +63,20 @@ public class CountLeftEnemy : MonoBehaviour
 
     void ShelterHP()
     {
-        if ((ps.shelters[0] != null))
-            shelterHP.text = "Shelter01\n" + ss1.getShelterHP();
+
+        shelterHP[0].text = "Shelter1" + ss1.getShelterHP();
+
+
+        if (ps.shelters[1].transform.parent.gameObject.activeSelf)
+            shelterHP[1].text = "Shelter2 / " + ss2.getShelterHP();
         else
-            shelterHP.text = "Shelter01\nblowed";
+            shelterHP[1].text = "Shelter2 / " + "Not Detected";
+
+
+        if (ps.shelters[2].transform.parent.gameObject.activeSelf)
+            shelterHP[2].text = "Shelter3 / " + ss3.getShelterHP();
+        else
+            shelterHP[2].text = "Shelter3 / " + "Not Detected";
     }
 
     void PlayerHP()
