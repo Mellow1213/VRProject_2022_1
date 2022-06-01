@@ -68,6 +68,7 @@ public class CountLeftEnemy : MonoBehaviour
                 shelterHP[0].text = "Shelter1 / " + ss1.getShelterHP();
         else
             shelterHP[0].text = "Shelter1 / " + "Not Detected";
+
         if (Mapis[1].activeSelf)
             shelterHP[1].text = "Shelter2 / " + ss2.getShelterHP();
         else
