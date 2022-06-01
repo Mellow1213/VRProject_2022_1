@@ -137,7 +137,7 @@ public class Player_Attack : MonoBehaviour
         }
         else
         {
-            if ((isGunSpinned && gunRotateSpeed >= 10f) || Input.GetMouseButtonUp(0))
+            if (isGunSpinned && ( gunRotateSpeed >= 10f && Input.GetMouseButtonUp(0)) )
             {
                 audioSource.PlayOneShot(WinDown);
                 isGunSpinned = false;

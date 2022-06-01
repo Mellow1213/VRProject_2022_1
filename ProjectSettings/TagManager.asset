@@ -11,6 +11,9 @@ TagManager:
   - Looppoint
   - LoopEndpoint
   - Bullet
+  - Shelter
+  - Turret
+  - MapCtrlpoint
   layers:
   - Default
   - TransparentFX

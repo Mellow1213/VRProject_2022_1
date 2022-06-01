@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5094271555349739360}
   m_Layer: 0
   m_Name: FlyerEnemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
