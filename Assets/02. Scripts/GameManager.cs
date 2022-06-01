@@ -47,8 +47,6 @@ public class GameManager : MonoBehaviour
     public bool useEnchantedBullet = false;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-            slowedTimer = 0f;
 
         if(!(bgm is null || heli is null))
             TimeSlow();
@@ -122,5 +120,20 @@ public class GameManager : MonoBehaviour
         score -= 150;
         useEnchantedBullet = true;
         timer = 0f;
+    }
+
+    float gameoverTimer = 0f;
+    public void GameOver()
+    {
+        Time.timeScale = 0f;
+        gameoverTimer += Time.unscaledDeltaTime;
+        Debug.Log(gameoverTimer);
+    }
+
+    private void FixedUpdate()
+    {
+
+        if (Input.GetKeyDown(KeyCode.P))
+            GameOver();
     }
 }
