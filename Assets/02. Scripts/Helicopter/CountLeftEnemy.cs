@@ -30,7 +30,7 @@ public class CountLeftEnemy : MonoBehaviour
         playerHP = 500f;
         ss1 = ps.shelters[0].transform.GetChild(1).GetComponent<ShelterStatus>();
         ss2 = ps.shelters[1].transform.GetChild(0).GetComponent<ShelterStatus>();
-        ss3 = ps.shelters[2].transform.GetChild(0).GetComponent<ShelterStatus>();
+        ss3 = ps.shelters[2].transform.GetChild(1).GetComponent<ShelterStatus>();
     }
 
     // Update is called once per frame
