@@ -2512,6 +2512,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointColor: {r: 0, g: 1, b: 0, a: 1}
   radius: 1.5
+--- !u!1 &1145892165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6077949429270215573, guid: ed40f182b01af434eafab1cbc9160696,
+    type: 3}
+  m_PrefabInstance: {fileID: 6391911175701201616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1146791285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,8 +2921,8 @@ MonoBehaviour:
   - {fileID: 1777062083}
   shelters:
   - {fileID: 139812610}
-  - {fileID: 597840091136807583, guid: ad1911aa9cf8eaa48b979cd9aee8697c, type: 3}
-  - {fileID: 4561615477747997715, guid: eaaa3186da677334ba806fd92172f6b9, type: 3}
+  - {fileID: 1641299394}
+  - {fileID: 1145892165}
 --- !u!4 &1406254394
 Transform:
   m_ObjectHideFlags: 0
@@ -3300,6 +3306,12 @@ Transform:
   m_Father: {fileID: 2119866234}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1641299394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611103193706074789, guid: 9e7586e8047760244a35b02175261555,
+    type: 3}
+  m_PrefabInstance: {fileID: 746253294530056094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1674199757
 GameObject:
   m_ObjectHideFlags: 0
