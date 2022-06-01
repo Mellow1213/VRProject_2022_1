@@ -64,7 +64,7 @@ public class CountLeftEnemy : MonoBehaviour
     void ShelterHP()
     {
 
-        shelterHP[0].text = "Shelter1" + ss1.getShelterHP();
+        shelterHP[0].text = "Shelter1 / " + ss1.getShelterHP();
 
 
         if (ps.shelters[1].transform.parent.gameObject.activeSelf)
