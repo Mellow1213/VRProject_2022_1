@@ -16,6 +16,10 @@ public class CountLeftEnemy : MonoBehaviour
     Progress_Stage01 ps;
 
 
+    ShelterStatus ss1;
+    ShelterStatus ss2;
+    ShelterStatus ss3;
+
     public float playerHP;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,9 @@ public class CountLeftEnemy : MonoBehaviour
         ps = GameObject.Find("ProgressManager").GetComponent<Progress_Stage01>();
         SearchEnemy();
         playerHP = 100f;
+        ss1 = ps.shelters[0].transform.GetChild(1).GetComponent<ShelterStatus>();
+        ss2 = ps.shelters[0].transform.GetChild(0).GetComponent<ShelterStatus>();
+        ss2 = ps.shelters[0].transform.GetChild(0).GetComponent<ShelterStatus>();
     }
 
     // Update is called once per frame
@@ -33,7 +40,7 @@ public class CountLeftEnemy : MonoBehaviour
         if(timer > 1f)
         {
             SearchEnemy();
-            //ShelterHP();
+            ShelterHP();
             PlayerHP();
             timer = 0;
         }
@@ -55,7 +62,7 @@ public class CountLeftEnemy : MonoBehaviour
     void ShelterHP()
     {
         if ((ps.shelters[0] != null))
-            shelterHP.text = "Shelter01\n" + ps.shelters[0].GetComponent<ShelterStatus>().getShelterHP();
+            shelterHP.text = "Shelter01\n" + ss1.getShelterHP();
         else
             shelterHP.text = "Shelter01\nblowed";
     }
