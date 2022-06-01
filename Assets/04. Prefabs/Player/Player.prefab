@@ -824,6 +824,7 @@ MonoBehaviour:
   - {fileID: 714255129776702416}
   - {fileID: 776142537898512961}
   playerHPUI: {fileID: 360738133290477578}
+  Mapis: []
   playerHP: 0
 --- !u!1 &363278680808146388
 GameObject:
@@ -4083,7 +4084,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Super Shot
+  m_text: 'Time Slow
 
     Cost 250'
   m_isRightToLeft: 0
@@ -4131,7 +4132,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 11
+  m_firstOverflowCharacterIndex: 10
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4155,7 +4156,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3539084743431472390}
-    characterCount: 19
+    characterCount: 18
     spriteCount: 0
     spaceCount: 3
     wordCount: 4
@@ -5441,7 +5442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time Slow
+  m_text: 'Super Shot
 
     Cost 150'
   m_isRightToLeft: 0
@@ -5489,7 +5490,7 @@ MonoBehaviour:
   m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 10
+  m_firstOverflowCharacterIndex: 11
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5513,7 +5514,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2075301621761462041}
-    characterCount: 18
+    characterCount: 19
     spriteCount: 0
     spaceCount: 3
     wordCount: 4

@@ -90,8 +90,8 @@ public class Player_Attack : MonoBehaviour
             if ((isAmmoEmpty || ammo != GameManager.Ammo) && !isReloading)
                 waitingTime += Time.unscaledDeltaTime;
 
-            // 탄창이 비어있거나 총을 발사하지 않은지 3초가 지나면
-            if (isAmmoEmpty || waitingTime > 3f)
+            // 탄창이 비어있거나 총을 발사하지 않은지 1초가 지나면
+            if (isAmmoEmpty || waitingTime > 1f)
             {
                 waitingTime = 0f;
                 StartCoroutine(Reload());
