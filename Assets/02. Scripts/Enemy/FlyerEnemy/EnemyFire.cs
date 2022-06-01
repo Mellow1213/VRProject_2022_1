@@ -8,9 +8,12 @@ public class EnemyFire : MonoBehaviour
     float timer = 0;
     public float fireDelay;
     public GameObject firePos;
+
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         if (fireDelay is 0)
             fireDelay = 3f;
     }
@@ -23,7 +26,7 @@ public class EnemyFire : MonoBehaviour
         if (timer > fireDelay)
         {
             GameObject temp = Instantiate(bullet, firePos.transform.position, firePos.transform.rotation);
-            temp.transform.parent = firePos.transform;
+            temp.transform.parent = player.transform;
             timer = 0f;
         }
     }
