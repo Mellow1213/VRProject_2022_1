@@ -5,27 +5,32 @@ using UnityEngine;
 
 public class ExplosiveCtrl : MonoBehaviour
 {
+    public GameObject explosion;
+    private Transform explosive;
+    private Status st;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        explosive = this.transform.parent;
+        st = GetComponent<Status>();
+        st.setHP(50);
+        explosion.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (st.getHP() <= 0)
+            Explosion();
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Explosion()
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 20);
-
-        for(int i=0; i<colliders.Length; i++)
-        {
-            Rigidbody enemy = colliders[i].GetComponent<Rigidbody>();
-            enemy.AddExplosionForce
-        }
+        this.gameObject.SetActive(false);
+        explosion.SetActive(true);
+        Destroy(explosive.gameObject, 2.0f);
     }
+
 }

@@ -50,6 +50,9 @@ public class Status : MonoBehaviour
                 Destroy(gameObject);
                 GameManager.Instance.score += 20;
                 break;
+            case "barrel":
+                Debug.Log("폭발");
+                break;
             default:
                 Destroy(gameObject);
                 break;
