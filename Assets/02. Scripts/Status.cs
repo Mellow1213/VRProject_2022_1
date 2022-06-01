@@ -45,14 +45,17 @@ public class Status : MonoBehaviour
             case "FlyerEnemy(Clone)":
                 score = 100;
                 flyerDestroy(gameObject);
+                GetComponent<EnemyFire>().enabled = false;
                 break;
             case "FlyerEnemy2(Clone)":
                 score = 50;
                 flyerDestroy(gameObject);
+                GetComponent<EnemyFire_immidiate>().enabled = false;
                 break;
             case "FlyerEnemy3(Clone)":
                 score = 20;
                 flyerDestroy(gameObject);
+                GetComponent<EnemyFire_immidiate>().enabled = false;
                 break;
             default:
                 Destroy(gameObject);
