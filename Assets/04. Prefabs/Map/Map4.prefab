@@ -280,7 +280,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5387340652133234055}
   - component: {fileID: 1086568359}
-  - component: {fileID: 1086568360}
   m_Layer: 0
   m_Name: EnemyTurrets
   m_TagString: Untagged
@@ -326,7 +325,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -410,19 +409,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1086568360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3759813430749879389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad6506a44551a0489f159038838f258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireSound: {fileID: 8300000, guid: ed67db8391be85c49b62fb7829a49e8a, type: 3}
 --- !u!1 &4051516098102947352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,17 +2348,17 @@ PrefabInstance:
     - target: {fileID: 6393392675863924481, guid: 5b43f80804c87a84bbee56487146055c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.18283
+      value: -366
       objectReference: {fileID: 0}
     - target: {fileID: 6393392675863924481, guid: 5b43f80804c87a84bbee56487146055c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 64.68506
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 6393392675863924481, guid: 5b43f80804c87a84bbee56487146055c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 73.09131
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 6393392675863924481, guid: 5b43f80804c87a84bbee56487146055c,
         type: 3}
@@ -2413,6 +2399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381978504389508485, guid: 5b43f80804c87a84bbee56487146055c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Shelter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b43f80804c87a84bbee56487146055c, type: 3}
@@ -10578,9 +10569,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a77bc73a4d9241469170e543dc414d5, type: 3}
---- !u!1 &801245261516753602 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6746864934982982169, guid: 5a77bc73a4d9241469170e543dc414d5,
+--- !u!4 &403278627444156791 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5991914504911862188, guid: 5a77bc73a4d9241469170e543dc414d5,
     type: 3}
   m_PrefabInstance: {fileID: 6250773874411622619}
   m_PrefabAsset: {fileID: 0}
@@ -10590,9 +10581,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6250773874411622619}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &403278627444156791 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5991914504911862188, guid: 5a77bc73a4d9241469170e543dc414d5,
+--- !u!1 &801245261516753602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6746864934982982169, guid: 5a77bc73a4d9241469170e543dc414d5,
     type: 3}
   m_PrefabInstance: {fileID: 6250773874411622619}
   m_PrefabAsset: {fileID: 0}
