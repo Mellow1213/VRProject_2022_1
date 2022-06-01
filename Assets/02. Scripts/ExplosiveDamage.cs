@@ -18,9 +18,9 @@ public class ExplosiveDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Turret"))
         {
-            collision.gameObject.GetComponent<Status>().Damaged(30);
+            collision.gameObject.GetComponent<Status>().Damaged(31);
         }
     }
 
