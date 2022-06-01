@@ -20,7 +20,7 @@ public class FlyEnemySpawn : MonoBehaviour
         //Debug.Log("FlyerSpawn (D)");
         if (Input.GetKeyDown(KeyCode.D) || timer > 5f)
         {            
-            Instantiate(flyerEnemy[Random.Range(0,flyerEnemy.Length)]);
+            Instantiate(flyerEnemy[Random.Range(0,flyerEnemy.Length)], transform.position, transform.rotation);
             timer = 0f;
         }
 

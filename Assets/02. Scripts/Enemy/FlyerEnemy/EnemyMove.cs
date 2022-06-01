@@ -31,14 +31,16 @@ public class EnemyMove : MonoBehaviour
         if (!em.isEmptyExist())
             Destroy(gameObject);
         else
-            for(int i = 0; i<enemyPositions.Length; i++)
+            while (true)
             {
-                if (em.getEmptyPos(i))
+                int random = Random.Range(0, enemyPositions.Length);
+                if (em.getEmptyPos(random))
                 {
-                    index = i;
-                    em.setEmptyPos(false, i);
+                    index = random;
+                    em.setEmptyPos(false, index);
                     break;
                 }
+
             }
     }
 
