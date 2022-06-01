@@ -6,10 +6,12 @@ public class FlyEnemyBullet : MonoBehaviour
 {
     GameObject hitPoint;
     float speed = 0;
+    CountLeftEnemy player;
     // Start is called before the first frame update
     void Start()
     {
         hitPoint = GameObject.Find("HitPoint");
+        player = GameObject.Find("Player").GetComponent<CountLeftEnemy>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class FlyEnemyBullet : MonoBehaviour
         {
             Debug.Log("확인");
             Destroy(gameObject);
+            player.playerHP -= 5f;
         }
     }
 }

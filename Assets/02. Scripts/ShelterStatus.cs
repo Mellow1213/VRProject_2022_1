@@ -18,10 +18,9 @@ public class ShelterStatus : MonoBehaviour
         isExplosion = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public float getShelterHP()
     {
-        
+        return HP;
     }
 
     private void OnTriggerEnter(Collider other)
