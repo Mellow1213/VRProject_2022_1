@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GotoMain : MonoBehaviour
+public class GameEnd : MonoBehaviour
 {
     float timer = 0;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class GotoMain : MonoBehaviour
 
         if(timer >= 5)
         {
-            SceneManager.LoadScene("01. MainMenu");
+            Application.Quit();
         }
     }
 }
