@@ -11,7 +11,7 @@ public class HelicopterMove : MonoBehaviour
     private int nextIndex = 1;
     int loopIndex;
 
-    bool loopEndSwitch = false;
+    public bool loopEndSwitch = false;
     bool goSwitch = true;
 
 
@@ -69,5 +69,12 @@ public class HelicopterMove : MonoBehaviour
 
         if (other.CompareTag("Waypoint"))
             nextIndex++;
+
+        if (other.CompareTag("MapCtrlpoint"))
+        {
+            nextIndex++;
+            other.GetComponent<CreateMap>().MapCtrl();
+        }
+
     }
 }

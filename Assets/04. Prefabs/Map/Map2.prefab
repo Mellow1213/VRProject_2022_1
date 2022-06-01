@@ -1311,6 +1311,71 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 314
       objectReference: {fileID: 0}
+    - target: {fileID: 45365106910741446, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 502001892369648651, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 502001892640600234, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 671238124809403642, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 906362202219309327, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023940130720806447, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023940130131018244, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023940130386863891, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534641630223999202, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5846702726879358521, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618816794503684959, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960826498887717227, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960826499105921863, guid: 3fb3b1a82f7ff7a4299f21ed83301863,
+        type: 3}
+      propertyPath: m_TagString
+      value: Turret
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb3b1a82f7ff7a4299f21ed83301863, type: 3}
 --- !u!4 &6222345620148210112 stripped
