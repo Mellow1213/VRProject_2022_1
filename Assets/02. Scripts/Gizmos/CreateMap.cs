@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CreateMap : MonoBehaviour
 {
-    public int destroyMapIndex;
-    public int createMapIndex;
+    public int[] destroyMapIndex;
+    public int[] createMapIndex;
 
     Progress_Stage01 ps;
     private void Start()
@@ -14,7 +14,10 @@ public class CreateMap : MonoBehaviour
     }
     public void MapCtrl()
     {
-        ps.DestroyMap(destroyMapIndex);
-        ps.CreateMap(createMapIndex);
+        for(int i=0; i<destroyMapIndex.Length; i++)
+            ps.DestroyMap(destroyMapIndex[i]);
+
+        for (int i=0; i<createMapIndex.Length; i++)
+            ps.CreateMap(createMapIndex[i]);
     }
 }

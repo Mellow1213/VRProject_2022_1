@@ -244,8 +244,8 @@ GameObject:
   - component: {fileID: 60583054}
   - component: {fileID: 60583056}
   m_Layer: 0
-  m_Name: WayPoint (25)
-  m_TagString: Waypoint
+  m_Name: MapCtrlPoint (6)
+  m_TagString: MapCtrlpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 4
-  createMapIndex: 7
+  destroyMapIndex: 
+  createMapIndex: 08000000
 --- !u!1 &71121070
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,8 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 6
-  createMapIndex: 9
+  destroyMapIndex: 05000000
+  createMapIndex: 09000000
 --- !u!1 &139812610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6594738681712596577, guid: 41b5826d26e4ec246aac243bafb8da27,
@@ -817,8 +817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 4
-  createMapIndex: 6
+  destroyMapIndex: 03000000
+  createMapIndex: 06000000
 --- !u!1 &175182586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,8 +1031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 0
-  createMapIndex: 3
+  destroyMapIndex: 00000000
+  createMapIndex: 03000000
 --- !u!1 &319943941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,8 +1642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 7
-  createMapIndex: 10
+  destroyMapIndex: 0600000007000000
+  createMapIndex: 0a000000
 --- !u!1 &638544873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,8 +2011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 0
-  createMapIndex: 4
+  destroyMapIndex: 
+  createMapIndex: 04000000
 --- !u!1 &800934263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,8 +2085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 8
-  createMapIndex: 11
+  destroyMapIndex: 
+  createMapIndex: 0b000000
 --- !u!1 &880637832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,8 +2719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 2
-  createMapIndex: 5
+  destroyMapIndex: 02000000
+  createMapIndex: 05000000
 --- !u!1 &1300497464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4327989325302823010, guid: b6af1e67582715e4d96d46fc8afa1eeb,
@@ -2870,8 +2870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 1
-  createMapIndex: 0
+  destroyMapIndex: 01000000
+  createMapIndex: 
 --- !u!1 &1395887722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6281150266197542143, guid: ed40f182b01af434eafab1cbc9160696,
@@ -3219,8 +3219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 5
-  createMapIndex: 8
+  destroyMapIndex: 
+  createMapIndex: 07000000
 --- !u!135 &1568324911
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3705,8 +3705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8485d3b16aa87e24d98265c4af29ec64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyMapIndex: 3
-  createMapIndex: 7
+  destroyMapIndex: 04000000
+  createMapIndex: 
 --- !u!1 &2008833362
 GameObject:
   m_ObjectHideFlags: 0
