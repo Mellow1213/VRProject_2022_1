@@ -53,7 +53,11 @@ public class CountLeftEnemy : MonoBehaviour
         else
             hm.loopEndSwitch = false;
 
+        if (ss1.getShelterHP() == 0 || ss2.getShelterHP() == 0 || ss3.getShelterHP() == 0)
+            GameManager.Instance.GameOver();
 
+        if (playerHP <= 0)
+            GameManager.Instance.GameOver();
     }
 
     void SearchEnemy()

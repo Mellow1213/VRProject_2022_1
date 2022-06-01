@@ -65,6 +65,7 @@ public class HelicopterMove : MonoBehaviour
         {
             nextIndex++;
             speed = Mathf.Lerp(speed, 0f, 0.8f);
+            GameManager.Instance.Clear();
         }
 
         if (other.CompareTag("Waypoint"))

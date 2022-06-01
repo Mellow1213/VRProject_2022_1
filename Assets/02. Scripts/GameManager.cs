@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if(!(bgm is null || heli is null) && !isGameEnd)
+        if(!(bgm is null || heli is null))
             TimeSlow();
 
         if(useEnchantedBullet)
@@ -122,13 +123,14 @@ public class GameManager : MonoBehaviour
         timer = 0f;
     }
 
-    bool isGameEnd = false;
-    float gameoverTimer = 0f;
     public void GameOver()
     {
-        isGameEnd = true;
-        gameoverTimer += Time.unscaledDeltaTime;
-        Debug.Log(gameoverTimer);
+        SceneManager.LoadScene("GameOver");
+    }
+
+    public void Clear()
+    {
+        SceneManager.LoadScene("Clear");
     }
 
 }
